@@ -11,34 +11,12 @@ if(!empty($_POST["submit"])){
         if($datos=$sql->fetch_object()){
             header("location:entraste.php");
         }else{
-            echo"<div class='alerta'>El correo o la contraseña está mal</div>";
+            echo"<div class='alerta'>Correo o contraseña incorrecta</div>";
         }
   
     }
 
 }
 
-
-
-
-
-/*$email = $_POST["email"];
-$password = $_POST["password"];
-session_start();
-$_SESSION['email']=$email;
-
-include("config.php");
-
-
-$validar=mysqli_query($conn,"SELECT * from usuarios where email='$email' and password='$password'");
-
-
-if(mysqli_num_rows($validar)){
-     header("location:entraste.php");
-
-}else{
-echo"<div class='alerta'>El correo o la contraseña est mal</div>";
-
-}*/
 
 ?>
