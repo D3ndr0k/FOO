@@ -13,17 +13,17 @@ Registro
           <img src="./assets/img/logo.png">
         </a>
           <nav>
-            <a href="#">SOBRE NOSOTRO</a>⠀⠀⠀
-            <a href="#">¿COMO FUNCIONA FOO!?</a>⠀⠀⠀
-            <a href="#">UNETE COMO NEGOCIO</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            <a href="registro.php"><button><b>REGISTRARTE</b></button></a>
-            <a href="iniciarsesion.php">INICIAR SESION</a>
+            <a href="#">SOBRE NOSOTROS</a>⠀⠀⠀
+            <a href="#">¿CÓMO FUNCIONA FOO!?</a>⠀⠀⠀
+            <a href="#">ÚNETE COMO NEGOCIO</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            <a href="registro.php"><button><b>REGÍSTRATE</b></button></a>
+            <a href="iniciarsesion.php">INICIAR SESIÓN</a>
             </ul>
           </nav>
         </header>
 <div class="centro"> 
 <form action="" method="POST">
-    <h1>⠀⠀REGISTRATE⠀⠀⠀⠀⠀⠀⠀⠀</h1>
+    <h1>⠀⠀REGÍSTRATE⠀⠀⠀⠀⠀⠀⠀⠀</h1>
     <hr color="#7EFF3"><br>
     <input type="text"  maxlength="30" placeholder=" Nombre" name="nombre">
     <br> <br>
@@ -33,7 +33,7 @@ Registro
     <br> <br>
     <input type="password" maxlength="30" placeholder=" Contraseña" name="password">
     <br> <br>
-    <center><input class="boton" type="submit" value="Registrate" name="submit">
+    <center><input class="boton" type="submit" value="Regístrate" name="submit">
     <br>
     
     <?php 
