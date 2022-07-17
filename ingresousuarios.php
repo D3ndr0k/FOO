@@ -2,7 +2,7 @@
 
 if(!empty($_POST["submit"])){
     if (empty($_POST["email"]) or empty($_POST["password"])){
-      echo "<div class='alerta'> Competa todos los campos </div>";
+      echo "<div class='alerta'> Completa todos los campos </div>";
     }else{
 
         $email = $_POST["email"];
