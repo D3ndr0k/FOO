@@ -5,7 +5,7 @@ session_start();
 
 if(!empty($_POST["submit"])){
   if (empty($_POST["nombre"]) or empty($_POST["apellido"]) or empty($_POST["email"]) or empty($_POST["password"])){
-    echo "<div class='alerta'> Competa todos los campos </div>";
+    echo "<div class='alerta'> Completa todos los campos </div>";
   }else{
 
     $nombre = $_POST["nombre"];
