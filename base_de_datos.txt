@@ -1,3 +1,6 @@
 base de datos: users 
-tabla: usuarios 
-campos: id int(7) pk y a_I,nombre varchar(30),apellido varchar(30),email varchar(255),password varchar(30)
+tabla: usuarios  
+campos: id int(7) pk y A_I,nombre varchar(30),apellido varchar(30),email varchar(255),password varchar(30)
+
+tabla: locales 
+campos: id int(7) pk y A_I,nombre varchar(30),direccion varchar(50),email varchar(255),password varchar(30), telefono int(9)

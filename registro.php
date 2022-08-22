@@ -14,8 +14,8 @@ Registro
         </a>
           <nav>
             <a href="#">SOBRE NOSOTROS</a>⠀⠀⠀
-            <a href="#">¿CÓMO FUNCIONA FOO!?</a>⠀⠀⠀
-            <a href="#">ÚNETE COMO NEGOCIO</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            <a href="comofunciona.html">¿CÓMO FUNCIONA FOO!?</a>⠀⠀⠀
+            <a href="registrolocales.php">ÚNETE COMO NEGOCIO</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀
             <a href="registro.php"><button><b>REGÍSTRATE</b></button></a>
             <a href="iniciarsesion.php">INICIAR SESIÓN</a>
             </ul>

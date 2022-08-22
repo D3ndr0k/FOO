@@ -2,7 +2,6 @@
 
 body{
   background-size: cover;
-  background: #f2f2f2;
   margin: 0;
   font-family:'Roboto', sans-serif;
   color: #3f1b6d;
@@ -65,9 +64,15 @@ button:hover{
 .container{
   margin: 0 auto;
   width: 75%;
-  max-width: 750px;
+  max-width: 800px;
+  text-align: center;
 
 }
+
+h1{
+  font-size: 50px;
+}
+
 
 footer{
   background-color:#3e1b6d2c;
@@ -80,4 +85,9 @@ footer{
   height:450px;
   margin: 8%;
 }
-
+.fotoscomo{
+  border-radius: 20px;
+  width:400px;
+  height:400px;
+  margin: 4%;
+}
