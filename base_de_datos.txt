@@ -1,6 +1,17 @@
-base de datos: users 
+base de datos: foo
 tabla: usuarios  
 campos: id int(7) pk y A_I,nombre varchar(30),apellido varchar(30),email varchar(255),password varchar(30)
 
 tabla: locales 
 campos: id int(7) pk y A_I,nombre varchar(30),direccion varchar(50),email varchar(255),password varchar(30), telefono int(9)
+
+
+
+
+create database foo;
+
+use foo;
+
+create table usuarios(id int(7)primary key AUTO_INCREMENT,nombre varchar(30),apellido varchar(30),email varchar(255),password varchar(30));
+
+create table locales(id int(7)primary key AUTO_INCREMENT,nombre varchar(30),direccion varchar(50),email varchar(255),password varchar(30),telefono int(9));
