@@ -5,7 +5,7 @@
 <title>
 Registro
 </title>
-<link rel="stylesheet" type="text/css" href="http://localhost/foo/assets/css/style_registro.css">
+<link rel="stylesheet" type="text/css" href="./assets/css/style_registro.css">
 </head>
 <body>
     <header>
