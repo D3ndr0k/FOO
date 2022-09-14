@@ -92,3 +92,42 @@ footer{
   height:400px;
   margin: 4%;
 }
+.fotossob{
+  border-radius: 20px;
+  width:350px;
+  height:350px;
+  margin: 10%;
+}
+.desplega {
+  font-family:'Roboto', sans-serif;
+  background-color:#3f1b6d;
+  font-weight: 600;
+  color: white;
+  padding: 25px 70px;
+  border-radius: 40px;
+  font-size: 14px;
+  border: none;
+}
+.desplegable{
+  position: relative;
+  margin-inline: 15%;
+  display: inline-block;
+}
+
+.desplega-texto {
+  display: none;
+  position: absolute;
+  background-color: #3e1b6d2c;
+  min-width: 250px;
+  margin: 15% -15%
+  
+}
+.desplegable:hover .desplega-texto {display:block;}
+
+.containersob{
+  margin: 0 auto;
+  width: 75%;
+  max-width: 1000px;
+  text-align: center;
+
+}

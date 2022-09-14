@@ -13,7 +13,7 @@ Registro
           <img src="./assets/img/logo.png">
         </a>
           <nav>
-            <a href="#">SOBRE NOSOTROS</a>⠀⠀⠀
+            <a href="sobrenosotros.html">SOBRE NOSOTROS</a>⠀⠀⠀
             <a href="comofunciona.html">¿CÓMO FUNCIONA FOO!?</a>⠀⠀⠀
             <a href="registrolocales.php">ÚNETE COMO NEGOCIO</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀
             <a href="registro.php"><button><b>REGÍSTRATE</b></button></a>

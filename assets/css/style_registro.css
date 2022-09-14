@@ -1,121 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-* {
+*{
     padding: 0;
     margin: 0;
 }
 
-body {
+body{
     width: 100%;
     height: 100vh;
-    font-family: 'Roboto', sans-serif;
+    font-family:'Roboto', sans-serif;    
     background-color: #f0f0f0;
+
 }
 
-.centro {
+.centro{
+    
     position: absolute;
     top: 58%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 
-form {
-    padding: 15% 15%;
+form{
+    padding: 15%  15%;
     text-align: center;
     background-color: white;
     border-radius: 20px;
 }
-
-input {
+input{
     width: 100%;
     color: black;
     font-size: 20px;
-    font-family: 'Roboto', sans-serif;
+    font-family:'Roboto', sans-serif;  
     display: block;
     border: none;
     border-radius: 20px;
     padding: 5px 5px;
-    background-color: #f0f0f0;
+    background-color:#f0f0f0;
 }
-
 
 /* barra superior */
-
-a {
+a{
     text-decoration: none;
     color: white;
-}
-
-header {
+  }
+  
+  header{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     min-height: 70px;
-    background-color: #994AFF;
-    align-items: center;
+    background-color:#994AFF;
+    align-items:center;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
-}
-
-.logo {
+  }
+  
+  .logo{
     display: flex;
     align-items: center;
     padding: 10px;
-}
-
-.logo img {
-    height: 50px;
+    
+  }
+  
+  .logo img{
+    height: 50px; 
     margin-right: 10px;
-}
-
-nav a {
+    
+  }
+  nav a{
     font-weight: 500;
     padding-right: 10px;
-}
-
-nav a:hover {
-    color: #3f1b6d;
-}
-
-button {
-    font-family: 'Roboto', sans-serif;
+   
+  }
+  nav a:hover{
+    color:#3f1b6d;
+  }
+  button {
+    font-family:'Roboto', sans-serif;
     font-weight: 500;
-    border: 0px;
+    border:0px;
     background-color: #7EFF30;
     border-radius: 40px;
-    color: #3f1b6d;
+    color:#3f1b6d;
     padding: 16px 32px;
     font-size: 16px;
     margin: 4px 2px;
     transition-duration: 0.4s;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #3f1b6d;
+    cursor: pointer; 
+  }
+  button:hover{
+    background-color:#3f1b6d;
     color: white;
-}
+  }
 
-.boton {
-    font-family: 'Roboto', sans-serif;
+  .boton {
+    font-family:'Roboto', sans-serif;
     font-weight: 550;
-    border: 0px;
+    border:0px;
     background-color: #7EFF30;
     border-radius: 40px;
-    color: #3f1b6d;
+    color:#3f1b6d;
     padding: 16px 32px;
     font-size: 20px;
     margin: 4px 2px;
     transition-duration: 0.4s;
-    cursor: pointer;
+    cursor: pointer; 
     width: 200px;
-}
-
-.boton:hover {
-    background-color: #3f1b6d;
+  }
+  .boton:hover{
+    background-color:#3f1b6d;
     color: white;
-}
-
-.alerta {
-    color: red;
+  }
+.alerta{
+  color: red;
 }

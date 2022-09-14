@@ -8,7 +8,19 @@ Registro
 <link rel="stylesheet" type="text/css" href="http://localhost/foo/assets/css/style_registro.css">
 </head>
 <body>
-   
+  <header>
+        <a href="inicio.html" class="logo">
+          <img src="./assets/img/logo.png">
+        </a>
+          <nav>
+            <a href="sobrenosotros.html">SOBRE NOSOTROS</a>⠀⠀⠀
+            <a href="comofunciona.html">¿CÓMO FUNCIONA FOO!?</a>⠀⠀⠀
+            <a href="resistrolocales.php">ÚNETE COMO NEGOCIO</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            <a href="registro.php"><button><b>REGÍSTRATE</b></button></a>
+            <a href="iniciarsesion.php">INICIAR SESIÓN</a>
+            </ul>
+          </nav>
+        </header> 
 <div class="centro"> 
 <form action="" method="POST">
     <h1>⠀⠀ÚNETENOS⠀⠀⠀⠀⠀⠀⠀⠀</h1>
@@ -33,19 +45,7 @@ Registro
     ?>
   </form>
 </div>
-<header>
-        <a href="inicio.html" class="logo">
-          <img src="./assets/img/logo.png">
-        </a>
-          <nav>
-            <a href="#">SOBRE NOSOTROS</a>⠀⠀⠀
-            <a href="comofunciona.html">¿CÓMO FUNCIONA FOO!?</a>⠀⠀⠀
-            <a href="resistrolocales.php">ÚNETE COMO NEGOCIO</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀
-            <a href="registro.php"><button><b>REGÍSTRATE</b></button></a>
-            <a href="iniciarsesion.php">INICIAR SESIÓN</a>
-            </ul>
-          </nav>
-        </header>
+
 
 
 </body>
