@@ -11,9 +11,9 @@ if(!empty($_POST["submit"])){
         $sqll=$conn->query(" select * from locales where email='$email' and password='$password'");
 
         if($datos=$sql->fetch_object()){
-            header("location:entraste.php");
+            header("location:menu.html");
         }elseif($datos=$sqll->fetch_object()){
-            header("location:entrastelocal.php");
+            header("location:menu.html");
         }else{
              echo"<div class='alerta'>Correo o contraseña incorrecta</div>";
         }
