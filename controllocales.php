@@ -13,7 +13,7 @@ if(!empty($_POST["submit"])){
     $email = $_POST["email"];
     $password = $_POST["password"];
     $telefono = $_POST["telefono"];
-
+    $rubro = $_POST["rubro"];
 
     $veremail = mysqli_query($conn,"SELECT * from locales where email='$email' ");
 
@@ -22,7 +22,7 @@ if(!empty($_POST["submit"])){
 
     }else{
 
-    $sql=$conn->query("insert into locales(nombre,direccion,email,password,telefono) values('$nombre','$direccion','$email','$password','$telefono')");
+    $sql=$conn->query("insert into locales(nombre,direccion,email,password,telefono,rubro) values('$nombre','$direccion','$email','$password','$telefono','$rubro')");
    if ($sql==1) {
     echo 'registrado';
    }else{

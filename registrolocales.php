@@ -35,9 +35,19 @@ Registro
     <br> <br>
     <input type="text" maxlength="9" placeholder=" Telefono" name="telefono">
     <br> <br>
-    <center><input class="boton" type="submit" value="Regístrate" name="submit">
-    <br>
     
+    
+    <select name="rubro">  
+    <option hidden selected>Rubro</option>
+      <option>Panadería</option>
+      <option>Cafetería</option>
+      <option>Almacén</option>
+      <option>Supermercado</option>
+      <option>Restaurante</option>
+    </select>
+    <br><br>
+<center><input class="boton" type="submit" value="Regístrate" name="submit">
+    <br>
     <?php 
     include ("config.php");
     include ("controllocales.php");
