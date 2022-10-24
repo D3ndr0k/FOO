@@ -9,7 +9,7 @@ create table usuarios(id int(7)primary key AUTO_INCREMENT,nombre varchar(30),ape
 
 create table locales(id int(7)primary key AUTO_INCREMENT,nombre varchar(30),direccion varchar(50),email varchar(255),password varchar(30),telefono int(9));
 
-create table locales(id_prducto int(7)primary key AUTO_INCREMENT,codigo int(15),nombre varchar(30),descripcion varchar(50),fechaventimiento date,precio int(6),marca varchar(15),imagen longblob,stock varchar(5));
+create table locales(id_prducto int(7)primary key AUTO_INCREMENT,codigo int(15),nombre varchar(30),descripcion varchar(50),fechaventimiento date,precio int(6),marca varchar(15),imagen longblob,stock int(5));
 
 
 
