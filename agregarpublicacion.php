@@ -12,7 +12,7 @@
     <br><center>
     <h2 style="color:#7EFF30;">Ingresar información del producto</h2><br><br><br><br>
     <div class="centro"> 
-    <center><form action="" method="POST" enctype="multipart/form-data">
+    <form action="" method="POST" enctype="multipart/form-data">
 
     <h3> <p>Imagen del producto</p><h3> 
         <input type="file" name="imagen" >
@@ -23,6 +23,7 @@
         <input type="date" name="fechavencimiento">
         <input type="number" step="0.01" min="0" placeholder=" precio" name="precio">
         <input type="text" placeholder=" marca" name="marca">
+        <input type="numbre" placeholder=" stock" name="stock">
        <center> <input class="boton"type="submit" value="ingresar" name="submit" >
        <?php 
     include ("config.php");

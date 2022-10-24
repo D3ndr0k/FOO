@@ -11,7 +11,7 @@ if(!empty($_POST["submit"])){
         $sqll=$conn->query(" select * from locales where email='$email' and password='$password'");
 
         if($datos=$sql->fetch_object()){
-            header("location:menu.html");
+            header("location:menuuser.php");
         }elseif($datos=$sqll->fetch_object()){
             header("location:menu.html");
         }else{

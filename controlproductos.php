@@ -15,9 +15,9 @@ if(!empty($_POST["submit"])){
     $fechavencimiento = $_POST["fechavencimiento"];
     $precio = $_POST["precio"];
     $marca = $_POST["marca"];
-
+    $stock = $_POST["stock"];
     
-    $sql=$conn->query("insert into productos(codigo,nombre,descripcion,fechavencimiento,precio,marca,imagen) values('$codigo','$nombre','$descripcion','$fechavencimiento','$precio','$marca','$imagen')");
+    $sql=$conn->query("insert into productos(codigo,nombre,descripcion,fechavencimiento,precio,marca,imagen,stock) values('$codigo','$nombre','$descripcion','$fechavencimiento','$precio','$marca','$imagen','$stock')");
    if ($sql==1) {
     echo 'registrado';
    }else{

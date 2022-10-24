@@ -10,7 +10,7 @@
 <body>
     <header>
         <a href="inicio.html" class="logo">
-        <img src="./assets/img/logo.png">
+        <img src="./assets/img/logo.png" width:"120px">
         </a>
           <nav>
             <a href="sobrenosotros.html">SOBRE NOSOTROS</a>⠀⠀⠀
