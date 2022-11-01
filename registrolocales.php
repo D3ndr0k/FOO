@@ -15,7 +15,7 @@ Registro
           <nav>
             <a href="sobrenosotros.html">SOBRE NOSOTROS</a>⠀⠀⠀
             <a href="comofunciona.html">¿CÓMO FUNCIONA FOO!?</a>⠀⠀⠀
-            <a href="resistrolocales.php">ÚNETE COMO NEGOCIO</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            <a href="registrolocales.php">ÚNETE COMO NEGOCIO</a>⠀⠀⠀⠀⠀⠀⠀⠀⠀
             <a href="registro.php"><button><b>REGÍSTRATE</b></button></a>
             <a href="iniciarsesion.php">INICIAR SESIÓN</a>
             </ul>
@@ -25,20 +25,21 @@ Registro
 <form action="" method="POST">
     <h1>⠀⠀ÚNETENOS⠀⠀⠀⠀⠀⠀⠀⠀</h1>
     <hr color="#7EFF3"><br>
-    <input type="text"  maxlength="30" placeholder=" Nombre" name="nombre">
+    
+    <input type="text"  maxlength="30" placeholder=" Nombre" name="nombre" required>
     <br> <br>
-    <input type="text" maxlength="50" placeholder=" Direccion" name="direccion">
+    <input type="text" maxlength="50" placeholder=" Dirección" name="direccion" required>
     <br> <br>
-    <input type="email" placeholder=" Email" name="email">
+    <input type="email" placeholder=" Email" name="email" required>
     <br> <br>
-    <input type="password" maxlength="30" placeholder=" Contraseña" name="password">
+    <input type="password" maxlength="30" placeholder=" Contraseña" name="password" required>
     <br> <br>
-    <input type="text" maxlength="9" placeholder=" Telefono" name="telefono">
+    <input type="text" maxlength="9" placeholder=" Telefono" name="telefono" required>
     <br> <br>
     
     
     <select name="rubro">  
-    <option hidden selected>Rubro</option>
+    <option hidden value="Otro">Rubro</option>
       <option>Panadería</option>
       <option>Cafetería</option>
       <option>Almacén</option>

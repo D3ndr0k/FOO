@@ -15,7 +15,7 @@
     <form action="" method="POST" enctype="multipart/form-data">
 
     <h3> <p>Imagen del producto</p><h3> 
-        <input type="file" name="imagen" >
+        <input type="file" name="imagen" accept="image/*">
         <input type="number" placeholder=" código del producto" name="codigo">
         <input type="text" placeholder=" nombre del producto" name="nombre">
         <input type="text" placeholder=" descripción" name="descripcion">

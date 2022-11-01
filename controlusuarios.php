@@ -14,8 +14,10 @@ if(!empty($_POST["submit"])){
     $password = $_POST["password"];
 
     $veremail = mysqli_query($conn,"SELECT * from usuarios where email='$email' ");
+    $veremail2 = mysqli_query($conn,"SELECT * from locales where email='$email' ");
 
-    if(mysqli_num_rows($veremail) > 0){
+
+    if(mysqli_num_rows($veremail) > 0 || mysqli_num_rows($veremail2) > 0){
         echo"<div class='alerta'>Este correo ya existe</div>";
 
     }else{

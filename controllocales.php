@@ -16,17 +16,19 @@ if(!empty($_POST["submit"])){
     $rubro = $_POST["rubro"];
 
     $veremail = mysqli_query($conn,"SELECT * from locales where email='$email' ");
+    $veremail2 = mysqli_query($conn,"SELECT * from usuarios where email='$email' ");
 
-    if(mysqli_num_rows($veremail) > 0){
+
+    if(mysqli_num_rows($veremail) > 0 || mysqli_num_rows($veremail2) > 0){
         echo"<div class='alerta'>Este correo ya existe</div>";
 
     }else{
 
     $sql=$conn->query("insert into locales(nombre,direccion,email,password,telefono,rubro) values('$nombre','$direccion','$email','$password','$telefono','$rubro')");
    if ($sql==1) {
-    echo 'registrado';
+    echo 'Registrado';
    }else{
-     echo 'error';
+     echo 'Error';
    }
  
   }

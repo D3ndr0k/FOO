@@ -25,13 +25,13 @@ Registro
 <form action="" method="POST">
     <h1>⠀⠀REGÍSTRATE⠀⠀⠀⠀⠀⠀⠀⠀</h1>
     <hr color="#7EFF3"><br>
-    <input type="text"  maxlength="30" placeholder=" Nombre" name="nombre">
+    <input type="text"  maxlength="30" placeholder=" Nombre" name="nombre" required>
     <br> <br>
-    <input type="text" maxlength="30" placeholder=" Apellido" name="apellido">
+    <input type="text" maxlength="30" placeholder=" Apellido" name="apellido" required>
     <br> <br>
-    <input type="email" placeholder=" Email" name="email">
+    <input type="email" placeholder=" Email" name="email" required>
     <br> <br>
-    <input type="password" maxlength="30" placeholder=" Contraseña" name="password">
+    <input type="password" maxlength="30" placeholder=" Contraseña" name="password" required>
     <br> <br>
     <center><input class="boton" type="submit" value="Regístrate" name="submit">
     <br>
