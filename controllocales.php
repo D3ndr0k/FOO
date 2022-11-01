@@ -26,7 +26,7 @@ if(!empty($_POST["submit"])){
 
     $sql=$conn->query("insert into locales(nombre,direccion,email,password,telefono,rubro) values('$nombre','$direccion','$email','$password','$telefono','$rubro')");
    if ($sql==1) {
-    echo 'Registrado';
+    header("location: iniciarsesion.php");
    }else{
      echo 'Error';
    }

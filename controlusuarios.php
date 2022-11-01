@@ -24,9 +24,9 @@ if(!empty($_POST["submit"])){
 
     $sql=$conn->query("insert into usuarios(nombre,apellido,email,password)values('$nombre','$apellido','$email','$password')");
    if ($sql==1) {
-    echo 'registrado';
+    header("location: iniciarsesion.php");
    }else{
-     echo 'error';
+     echo 'Error';
    }
  
   }

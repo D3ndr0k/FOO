@@ -70,7 +70,7 @@ if(empty($_SESSION["id"])){
 </div>
 <div class="botones">
     <a class="centro1" href="agregarpublicacion.php"><button>Agregar publicación</button></a>
-    <a class="centro2" href="misproductos.html"><button>Mis productos</button></a>
+    <a class="centro2" href="misproductos.php"><button>Mis productos</button></a>
    <a class="centro3" href="reservados.html"> <button>Reservados</button></a>
 
 

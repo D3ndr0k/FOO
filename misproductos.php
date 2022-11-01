@@ -14,7 +14,11 @@
 <div class="conten">
 <?php
 include("config.php");
-$query = "select * from productos";
+session_start();
+
+$local = $_SESSION["id"];
+
+$query = "select * from productos where local='$local'";
 $res = $conn ->query($query);
 while ($row = $res->fetch_assoc()){
 ?>
