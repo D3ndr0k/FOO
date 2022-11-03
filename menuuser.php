@@ -18,19 +18,15 @@ $query = "select * from productos";
 $res = $conn ->query($query);
 while ($row = $res->fetch_assoc()){
 ?>
-<div class="desplegable">
+
 <div class="card">
-    <div class="desplega-texto">
-    <p>⠀⠀Vencimiento: <?php echo $row['fechavencimiento']; ?> </p>
-    <p>⠀⠀Marca: <?php echo $row['marca']; ?> </p>
-    <p>⠀⠀Unidades disponibles: <?php echo $row['stock']; ?> </p> 
-    </div>
+    
         <img class="img" src="data:image/;base64,  <?php echo base64_encode($row['imagen']); ?>">
-    <h3>⠀⠀<?php echo $row['nombre']; ?></h3>
-    <p>⠀⠀<?php echo $row['descripcion']; ?> </p>
+    <a href="producto.php?pid=<?php echo $row['id_producto'];  ?>"><h3>⠀⠀<?php echo $row['nombre']; ?></h3></a>
     <p>⠀⠀$<?php echo $row['precio']; ?> </p>
+    <p>⠀⠀Vencimiento: <?php echo $row['fechavencimiento']; ?> </p>
+    
 </div>
-  </div>
 <?php
 }
 ?>

@@ -21,6 +21,24 @@ Registro
             </ul>
           </nav>
         </header> 
+<br><br><br><br><br>
+        <div class="desplegable">
+    <img width="50px" src="https://cdn-icons-png.flaticon.com/512/189/189665.png">
+    <div class="desplega-texto">
+      qefkufwekfefebfebbbjbjbjebjefbjefbjebjbjbfbfbjbjfbjfbjfbj
+      fjjbfbjfebjfbjjbldbjlbjldfbjldfbjldfbjdfbjfbjfbjfbjfbdfj
+      bjlefblfsbjlsbjlfsbjfdbjlfdbjldfbjlfbjlfbjlfdbldfbjfbjlbj
+<br>
+<br>
+      kadfbjfaebjlfadlbjdfbjdsfbjldsfndnfkfdnnfdjldsflbjdfbjldfbj
+      jbadbjldcbjldfbjldfbjldfbjdvsbjldfsbdsfjbfdbjfdbjdsbjbdfbjds
+      bjdfjbldslbjdsfbdfsbdfbjldbjldfsbjldfsbfdbjfdbjfdsbjlfdsbjlf
+    </div>
+  </div>
+
+
+
+
 <div class="centro"> 
 <form action="" method="POST">
     <h1>⠀⠀ÚNETENOS⠀⠀⠀⠀⠀⠀⠀⠀</h1>
