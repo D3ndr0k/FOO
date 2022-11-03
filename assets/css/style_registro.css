@@ -127,3 +127,25 @@ a{
 .alerta{
   color: red;
 }
+
+
+
+
+.desplegable{
+  position: relative;
+  margin-inline: 15%;
+  display: inline-block;
+  float:right;
+  margin: 0% 30%
+}
+
+.desplega-texto {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  max-width: 450px;
+  margin: -110% 0%
+  
+}
+.desplegable:hover .desplega-texto {display:block;}
+
