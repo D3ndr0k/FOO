@@ -2,7 +2,7 @@
 session_start();
 include("config.php");
 
-$id_producto = $_SESSION["id_producto"];;
+
 
 
 $query = "select * from productos where id_producto= '$_GET[pid]'";
@@ -15,7 +15,7 @@ $row = mysqli_fetch_array($res);
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./assets/style_productos.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style_productos.css">
 </head>
 <body>
 <div class="conten">

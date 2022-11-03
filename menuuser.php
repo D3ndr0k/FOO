@@ -3,14 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/style_productos.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style_menu.css">
 </head>
 <body>
 
+    <nav class="menu">
+   <img src="assets/img/logo.png" id="logo" alt="">
 
+   <ul>
+     <li> <a href="#"> Inicio</a></li>
+        <li> <a href="#"> Sobre nosotros </a></li>
+            <li> <a href="#"> Contactos </a>
+                </ul>
 
-<br><br><br><br><br><br><br>
+<img src="assets/img/Logo1.png" id="user-pic" alt="" onclick="toggleMenu()">
+<div class="sub-menu-wrapp" id="subMenu">
+<div class="sub-menu">
+<div class="uer-info">
+    <img src="assets/img/profile.png">
+    <h3>
+        <?php
+            echo ucwords($_SESSION["nombre"]);
+        ?>
+    </h3>
+</div>
+<hr>
+<a href="micuenta.html" class="sub-menu-link">
+<img src="assets/img/profile.png">
+<p>Mi cuenta</p>
+<span></span>
+</a>
+<a href="assets/img/ajustes.html" class="sub-menu-link">
+    <img src="assets/img/setting.png">
+    <p>Ajustes</p>
+    <span></span>
+    </a>
+    <a href="ayuda.html" class="sub-menu-link">
+        <img src="assets/img/help.png">
+        <p>Ayuda</p>
+        <span></span>
+        </a>
+        <a href="cerrar_sesion.php" class="sub-menu-link">
+            <img src="assets/img/logout.png" >
+            <p>Cerrar sesión</p>
+            <span></span>
+            </a>
 
+            
+
+</div>
+</div>
+
+    </nav>
+
+</div>
+<br><br><br><br>
 <div class="conten">
 <?php
 include("config.php");
