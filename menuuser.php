@@ -8,7 +8,7 @@
 <body>
 
     <nav class="menu">
-   <img src="assets/img/logo.png" id="logo" alt="">
+  <a href="menuuser.php"> <img src="assets/img/logo.png" id="logo" alt=""></a>
 
    <ul>
      <li> <a href="#"> Inicio</a></li>
@@ -79,5 +79,11 @@ while ($row = $res->fetch_assoc()){
 ?>
 </div>
   <br><br><br><br><br><br><br>.
+  <script>
+    let subMenu=document.getElementById("subMenu")
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu")
+    }
+</script>
 </body>
 </html>
