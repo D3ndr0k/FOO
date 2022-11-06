@@ -12,6 +12,8 @@ if(!empty($_POST["submit"])){
 
         if($datos=$sql->fetch_object()){
             header("location:menuuser.php");
+            $_SESSION['idu']=$datos->id;
+            $_SESSION['nombreu']=$datos->nombre;
         }elseif($datos=$sqll->fetch_object()){
             $_SESSION["nombre"]=$datos->nombre;
             $_SESSION["id"]=$datos->id;
