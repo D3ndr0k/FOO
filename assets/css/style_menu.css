@@ -65,7 +65,7 @@ nav,li,ul{
 .sub-menu-wrapp{
 position: absolute;
 top: 100%;
-right: 10%;
+right: 0%;
 width: 320px;
 max-height: 0px;
 overflow: hidden;
@@ -73,7 +73,7 @@ transition: max-height 0.5s;
 
 }
 .sub-menu-wrapp.open-menu{
-    max-height: 400px;
+    max-height: 480px;
 }
 .sub-menu{
 background: #fff;

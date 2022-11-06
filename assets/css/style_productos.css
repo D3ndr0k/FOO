@@ -86,4 +86,17 @@ h3{
 }
 .desplegable:hover .desplega-texto {display:block;}
 
-  
+.boton {
+  font-family:'Roboto', sans-serif;
+  font-weight: 550;
+  border:0px;
+  background-color: #7EFF30;
+  border-radius: 40px;
+  color:#3f1b6d;
+  padding: 16px 32px;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer; 
+  width: 200px;
+}
