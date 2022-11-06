@@ -19,7 +19,7 @@ if(empty($_SESSION["id"])){
 <body>
     <div class="hero">
     <nav class="menu">
-   <img src="assets/img/logo.png" id="logo" alt="">
+   <a href="inicio.html"><img src="assets/img/logo.png" id="logo" alt=""></a>
 
    <ul>
      <li> <a href="#"> Inicio</a></li>

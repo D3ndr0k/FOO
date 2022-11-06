@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio usuarios</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="hero">
+    <nav class="menu">
+   <img src="logo.png" id="logo" alt="">
+
+   <!--barra de navegación-->
+
+   <ul>
+     <li> <a href="#"> Inicio</a></li>
+        <li> <a href="#"> Sobre nosotros </a></li>
+            <li> <a href="#"> Contactos </a></li>
+                <li><a href="miscompras.html">Mis compras</a></li>
+                </ul>
+
+<img src="Logo1.png" id="user-pic" alt="" onclick="toggleMenu()">
+<div class="sub-menu-wrapp" id="subMenu">
+<div class="sub-menu">
+<div class="uer-info">
+    <img src="profile.png">
+    <h3> Luciano Pintos</h3>
+</div>
+<hr>
+<a href="#" class="sub-menu-link">
+<img src="profile.png">
+<p>Mi cuenta</p>
+<span></span>
+</a>
+<a href="#" class="sub-menu-link">
+    <img src="setting.png">
+    <p>Ajustes</p>
+    <span></span>
+    </a>
+    <a href="#" class="sub-menu-link">
+        <img src="help.png">
+        <p>Ayuda</p>
+        <span></span>
+        </a>
+        <a href="#" class="sub-menu-link">
+            <img src="logout.png" >
+            <p>Cerrar sesión</p>
+            <span></span>
+            </a>
+</div>
+</div>
+
+    </nav>
+
+</div>
+
+
+
+</div>
+<script>
+    let subMenu=document.getElementById("subMenu")
+    function toggleMenu(){
+        subMenu.classList.toggle("open-menu")
+    }
+</script>
+</body>
+</html>

@@ -25,14 +25,22 @@ Registro
         <div class="desplegable">
     <img width="50px" src="https://cdn-icons-png.flaticon.com/512/189/189665.png">
     <div class="desplega-texto">
-      qefkufwekfefebfebbbjbjbjebjefbjefbjebjbjbfbfbjbjfbjfbjfbj
-      fjjbfbjfebjfbjjbldbjlbjldfbjldfbjldfbjdfbjfbjfbjfbjfbdfj
-      bjlefblfsbjlsbjlfsbjfdbjlfdbjldfbjlfbjlfbjlfdbldfbjfbjlbj
+      .....................................................................
+      Paso 1: Registra tu negocio.
+      .....................................................................
+      Paso 2: Inicia sesión. 
+      .....................................................................
+      Paso 3: Agrega tus publicaciones.
+      .....................................................................
+      Éstas quedarán guardadas en Mis productos.
+      .....................................................................
+      Paso 4: En Reservados estarán los productos que serán comprados por los usuarios.
+      .....................................................................
+
+
 <br>
 <br>
-      kadfbjfaebjlfadlbjdfbjdsfbjldsfndnfkfdnnfdjldsflbjdfbjldfbj
-      jbadbjldcbjldfbjldfbjldfbjdvsbjldfsbdsfjbfdbjfdbjdsbjbdfbjds
-      bjdfjbldslbjdsfbdfsbdfbjldbjldfsbjldfsbfdbjfdbjfdsbjlfdsbjlf
+
     </div>
   </div>
 

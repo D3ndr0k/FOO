@@ -8,6 +8,7 @@ include("config.php");
 $query = "select * from productos where id_producto= '$_GET[pid]'";
 $res = $conn ->query($query);
 $row = mysqli_fetch_array($res);
+
 ?>
 
 <!DOCTYPE html>
@@ -28,11 +29,42 @@ $row = mysqli_fetch_array($res);
     <p>⠀⠀$<?php echo $row['precio']; ?> </p>
     <p>⠀⠀Vencimiento: <?php echo $row['fechavencimiento']; ?> </p>
     <p>⠀⠀Stock: <?php echo $row['stock']; ?></p>
-    
-</div>
-</div>
+      
+    <form action="" method="POST">
+   <center><input type="number" name="cantidad" placeholder="Cantidad"> <br><br>
+     <input class="boton" type="submit" value="RESERVAR" name="submit" >
+    </form>
 
 
+
+
+<?php
+date_default_timezone_set("America/Montevideo");
+$fecha = date('Y-m-d');
+$hora = date('H:i:s');
+$prod = $row['id_producto'];
+
+if(!empty($_POST["submit"])){
+    $cantidad = $_POST["cantidad"];
+    $idu=$_SESSION["idu"];
+    $idp=$_SESSION['idp'];
+
+
+    $sql= mysqli_query($conn,"insert into reservas(fecha, hora, cantidad, codigoproducto, codigousuario) values ('$fecha', '$hora', '$cantidad', '$prod', '$idu')");
+   if ($sql==1) {
+    echo 'Reservado';
+    $restock=$conn->query("update productos set stock = stock - '$cantidad'");
+   
+
+   }else{
+     echo 'Error';
+   }
+}
+
+
+?>
+</div>
+</div>
 
 </body>
 </html>
