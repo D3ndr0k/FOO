@@ -48,6 +48,7 @@ if(!empty($_POST["submit"])){
     $cantidad = $_POST["cantidad"];
     $idu=$_SESSION["idu"];
     $idp=$_SESSION['idp'];
+    $idl=$_SESSION['id']
 
 
     $sql= mysqli_query($conn,"insert into reservas(fecha, hora, cantidad, codigoproducto, codigousuario, codigolocal) values ('$fecha', '$hora', '$cantidad', '$prod', '$idu', '$idl')");
