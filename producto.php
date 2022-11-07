@@ -50,10 +50,10 @@ if(!empty($_POST["submit"])){
     $idp=$_SESSION['idp'];
 
 
-    $sql= mysqli_query($conn,"insert into reservas(fecha, hora, cantidad, codigoproducto, codigousuario) values ('$fecha', '$hora', '$cantidad', '$prod', '$idu')");
+    $sql= mysqli_query($conn,"insert into reservas(fecha, hora, cantidad, codigoproducto, codigousuario, codigolocal) values ('$fecha', '$hora', '$cantidad', '$prod', '$idu', '$idl')");
    if ($sql==1) {
     echo 'Reservado';
-    $restock=$conn->query("update productos set stock = stock - '$cantidad'");
+    $restock=$conn->query("update productos set stock = stock - '$cantidad' where id_producto='$prod'");
    
 
    }else{
