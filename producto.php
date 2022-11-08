@@ -29,9 +29,10 @@ $row = mysqli_fetch_array($res);
     <p>⠀⠀$<?php echo $row['precio']; ?> </p>
     <p>⠀⠀Vencimiento: <?php echo $row['fechavencimiento']; ?> </p>
     <p>⠀⠀Stock: <?php echo $row['stock']; ?></p>
-      
+  
+
     <form action="" method="POST">
-   <center><input type="number" name="cantidad" placeholder="Cantidad"> <br><br>
+   <center><input type="number" name="cantidad" placeholder="Cantidad" min="1" max="<?php echo $row['stock']; ?>"> <br><br>
      <input class="boton" type="submit" value="RESERVAR" name="submit" >
     </form>
 
@@ -47,12 +48,16 @@ $prod = $row['id_producto'];
 if(!empty($_POST["submit"])){
     $cantidad = $_POST["cantidad"];
     $idu=$_SESSION["idu"];
-    $idp=$_SESSION['idp'];
-    $idl=$_SESSION['id']
+    $idl=$_SESSION['id'];
+
+    
+$verstock = $row['stock'];
+
+    if($verstock > 0 ){
 
 
-    $sql= mysqli_query($conn,"insert into reservas(fecha, hora, cantidad, codigoproducto, codigousuario, codigolocal) values ('$fecha', '$hora', '$cantidad', '$prod', '$idu', '$idl')");
-   if ($sql==1) {
+    $sql = mysqli_query($conn,"insert into reservas(fecha, hora, cantidad, codigoproducto, codigousuario, codigolocal) values ('$fecha', '$hora', '$cantidad', '$prod', '$idu', '$idl')");
+    if ($sql==1) {
     echo 'Reservado';
     $restock=$conn->query("update productos set stock = stock - '$cantidad' where id_producto='$prod'");
    
@@ -61,7 +66,7 @@ if(!empty($_POST["submit"])){
      echo 'Error';
    }
 }
-
+}
 
 ?>
 </div>

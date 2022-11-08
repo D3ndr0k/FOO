@@ -66,7 +66,7 @@ session_start();
 <div class="conten">
 <?php
 
-$query = "select * from productos";
+$query = "select * from productos where stock>0";
 $res = $conn ->query($query);
 while ($row = $res->fetch_assoc()){
     
