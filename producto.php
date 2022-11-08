@@ -53,11 +53,11 @@ if(!empty($_POST["submit"])){
     
 $verstock = $row['stock'];
 
-    if($verstock > 0 ){
+    if($verstock >= $cantidad ){
 
+    $sql = mysqli_query($conn,"insert into reservas(fecha, hora, cantidad, codigoproducto, codigousuario, codigolocal) values ('$fecha', '$hora', '$cantidad', '$prod', '$idu', '$idl')",$resultmode = MYSQLI_STORE_RESULT);
 
-    $sql = mysqli_query($conn,"insert into reservas(fecha, hora, cantidad, codigoproducto, codigousuario, codigolocal) values ('$fecha', '$hora', '$cantidad', '$prod', '$idu', '$idl')");
-    if ($sql==1) {
+    if ($resultmode==0) {
     echo 'Reservado';
     $restock=$conn->query("update productos set stock = stock - '$cantidad' where id_producto='$prod'");
    
