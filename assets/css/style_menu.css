@@ -339,4 +339,13 @@ h3{
 h3{
     color:#994aff;
 }
+
+.infouser {
+
+    background-color: #f0f0f0;
+    position: absolute;
+    top: 20%;
+    right: 40%;
+    color:#994AFF
+}
   

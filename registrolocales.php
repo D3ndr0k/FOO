@@ -48,6 +48,7 @@ Registro
 
 
 <div class="centro"> 
+<!-- formulario para ingresar la información en el registro de locales -->
 <form action="" method="POST">
     <h1>⠀⠀ÚNETENOS⠀⠀⠀⠀⠀⠀⠀⠀</h1>
     <hr color="#7EFF3"><br>
@@ -82,11 +83,5 @@ Registro
     ?>
   </form>
 </div>
-
-
-
 </body>
-
-
-
 </html>

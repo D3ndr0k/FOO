@@ -20,26 +20,19 @@ if(empty($_SESSION["id"])){
     <div class="hero">
     <nav class="menu">
    <a href="inicio.html"><img src="assets/img/logo.png" id="logo" alt=""></a>
-
    <ul>
-     <li> <a href="#"> Inicio</a></li>
-        <li> <a href="#"> Sobre nosotros </a></li>
-            <li> <a href="#"> Contactos </a>
-                </ul>
+     <li> <?php
+            echo ucwords($_SESSION["nombre"]);
+        ?>
+        </li>
+</ul>
 
 <img src="assets/img/Logo1.png" id="user-pic" alt="" onclick="toggleMenu()">
 <div class="sub-menu-wrapp" id="subMenu">
 <div class="sub-menu">
 <div class="uer-info">
-    <img src="assets/img/profile.png">
-    <h3>
-        <?php
-            echo ucwords($_SESSION["nombre"]);
-        ?>
-    </h3>
 </div>
-<hr>
-<a href="micuenta.html" class="sub-menu-link">
+<a href="micuentalocal.php" class="sub-menu-link">
 <img src="assets/img/profile.png">
 <p>Mi cuenta</p>
 <span></span>
@@ -71,7 +64,7 @@ if(empty($_SESSION["id"])){
 <div class="botones">
     <a class="centro" href="agregarpublicacion.php"><button>Agregar publicación</button></a>
     <a class="centro2" href="misproductos.php"><button>Mis productos</button></a>
-   <a class="centro3" href="reservados.html"> <button>Reservados</button></a>
+   <a class="centro3" href="reservaslocal.php"> <button>Reservados</button></a>
 
 
 </div>

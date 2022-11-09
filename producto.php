@@ -3,8 +3,6 @@ session_start();
 include("config.php");
 
 
-
-
 $query = "select * from productos where id_producto= '$_GET[pid]'";
 $res = $conn ->query($query);
 $row = mysqli_fetch_array($res);
@@ -15,7 +13,7 @@ $row = mysqli_fetch_array($res);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Producto</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style_productos.css">
 </head>
 <body>
@@ -47,15 +45,16 @@ $prod = $row['id_producto'];
 
 if(!empty($_POST["submit"])){
     $cantidad = $_POST["cantidad"];
-    $idu=$_SESSION["idu"];
-    $idl=$_SESSION['id'];
+    $idu = $_SESSION["idu"];
+    $idl = $row['local'];
+
 
     
 $verstock = $row['stock'];
 
     if($verstock >= $cantidad ){
 
-    $sql = mysqli_query($conn,"insert into reservas(fecha, hora, cantidad, codigoproducto, codigousuario, codigolocal) values ('$fecha', '$hora', '$cantidad', '$prod', '$idu', '$idl')",$resultmode = MYSQLI_STORE_RESULT);
+    $sql = mysqli_query($conn,"insert into reservas(fecha, hora, cantidad, codigoproducto, codigousuario, codigolocal) values ('$fecha', '$hora', '$cantidad', '$prod', '$idu', '$idl' )",$resultmode = MYSQLI_STORE_RESULT);
 
     if ($resultmode==0) {
     echo 'Reservado';
@@ -74,5 +73,3 @@ $verstock = $row['stock'];
 
 </body>
 </html>
-  
-

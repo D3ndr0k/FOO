@@ -1,3 +1,9 @@
+<?php
+include("config.php");
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,23 +20,20 @@
     <a href="menu.php"> <img src="assets/img/logo.png" id="logo" alt=""></a>
 
    <ul>
-     <li> <a href="#"> Inicio</a></li>
-        <li> <a href="#"> Sobre nosotros </a></li>
-            <li> <a href="#"> Contactos </a>
-                </ul>
+   <h3>
+     <li> <?php
+            echo ucwords($_SESSION["nombre"]);
+        ?>
+     </h3>   
+    </li>
+</ul>
 
 <img src="assets/img/Logo1.png" id="user-pic" alt="" onclick="toggleMenu()">
 <div class="sub-menu-wrapp" id="subMenu">
 <div class="sub-menu">
 <div class="uer-info">
-    <img src="assets/img/profile.png">
-    <h3>
-        <?php
-            echo ucwords($_SESSION["nombre"]);
-        ?>
-    </h3>
+
 </div>
-<hr>
 <a href="micuenta.html" class="sub-menu-link">
 <img src="assets/img/profile.png">
 <p>Mi cuenta</p>
@@ -71,11 +74,11 @@
         <input type="text" placeholder=" marca" name="marca">
         <input type="numbre" placeholder=" stock" name="stock">
        <center> <input class="boton"type="submit" value="ingresar" name="submit" >
+
        <?php 
-    include ("config.php");
     include ("controlproductos.php");
-    
     ?>
+
     </form>
     </div>
 

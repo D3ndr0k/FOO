@@ -21,7 +21,9 @@ Registro
             </ul>
           </nav>
         </header>
+        
 <div class="centro"> 
+<!-- formulario para ingresar la información en el registro de un usuario -->
 <form action="" method="POST">
     <h1>⠀⠀REGÍSTRATE⠀⠀⠀⠀⠀⠀⠀⠀</h1>
     <hr color="#7EFF3"><br>
@@ -43,11 +45,5 @@ Registro
     ?>
   </form>
 </div>
-
-
-
 </body>
-
-
-
 </html>

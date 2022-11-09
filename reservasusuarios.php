@@ -2,11 +2,12 @@
 session_start();
 include("config.php");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Mis productos</title>
+    <title>Reservas usuario</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style_menu.css">
 </head>
 <body>
@@ -15,20 +16,18 @@ include("config.php");
 <nav class="menu">
   <a href="menu.php"> <img src="assets/img/logo.png" id="logo" alt=""></a>
 
-  <ul>
-     <li> <?php
-            echo ucwords($_SESSION["nombre"]);
-        ?></li>
-</ul>
-
+   <ul>
+     <li>
+        <?php
+            echo ucwords($_SESSION["nombreu"]);
+        ?>
+      </li>
+    </ul>
 
 <img src="assets/img/Logo1.png" id="user-pic" alt="" onclick="toggleMenu()">
 <div class="sub-menu-wrapp" id="subMenu">
 <div class="sub-menu">
 <div class="uer-info">
-
-
-<!-- sub-menú desplegable con información sobre el local logueado y demás funcionalidades -->
 </div>
 <a href="micuenta.php" class="sub-menu-link">
 <img src="assets/img/profile.png">
@@ -51,7 +50,7 @@ include("config.php");
             <span></span>
             </a>
 
-            
+           
 
 </div>
 </div>
@@ -63,25 +62,20 @@ include("config.php");
 <div class="conten">
 <?php
 
-$local = $_SESSION["id"];
+$usuario = $_SESSION["idu"];
 
-$query = "select * from productos where local='$local'";
+$query = "select * from reservas where codigousuario='$usuario'";
 $res = $conn ->query($query);
 while ($row = $res->fetch_assoc()){
 ?>
 
 <div class="cardd">
     <img class="img" src="data:image/;base64,  <?php echo base64_encode($row['imagen']); ?>">
-    <h3>⠀⠀<?php echo $row['nombre']; ?></h3>
-    <p>⠀⠀<?php echo $row['descripcion']; ?> </p>
-    <p>⠀⠀$<?php echo $row['precio']; ?> </p>
-    <p>⠀⠀Vencimiento: <?php echo $row['fechavencimiento']; ?> </p>
-    <p>⠀⠀Marca: <?php echo $row['marca']; ?> </p>
-    <p>⠀⠀Unidades disponibles: <?php echo $row['stock']; ?> </p>
-    <a href="actualizarstock.php">Actualizar stock</a>
-
-
-
+    <h3>⠀⠀Fecha: <?php echo $row['fecha']; ?></h3>
+    <p>⠀⠀Hora: <?php echo $row['hora']; ?> </p>
+    <p>⠀⠀Cantidad: <?php echo $row['cantidad']; ?> </p>
+    <p>⠀⠀Código producto: <?php echo $row['codigoproducto']; ?> </p>
+    <p>⠀⠀Código usuario: <?php echo $row['codigousuario']; ?> </p>
 
 </div>
 

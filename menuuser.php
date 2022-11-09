@@ -7,7 +7,7 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Menú usuarios</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style_menu.css">
 </head>
 <body>
@@ -16,24 +16,22 @@ session_start();
   <a href="menuuser.php"> <img src="assets/img/logo.png" id="logo" alt=""></a>
 
    <ul>
-     <li> <a href="#"> Inicio</a></li>
-        <li> <a href="#"> Sobre nosotros </a></li>
-            <li> <a href="#"> Contactos </a>
-                </ul>
+   <li>
+   <a href="reservasusuarios.php">Mis reservas</a>
+   </li>
+     <li>         
+        <?php
+            echo ucwords($_SESSION["nombreu"]);
+        ?>
+    </li>
+</ul>
 
 <img src="assets/img/Logo1.png" id="user-pic" alt="" onclick="toggleMenu()">
 <div class="sub-menu-wrapp" id="subMenu">
 <div class="sub-menu">
 <div class="uer-info">
-    <img src="assets/img/profile.png">
-    <h3>
-        <?php
-            echo ucwords($_SESSION["nombreu"]);
-        ?>
-    </h3>
 </div>
-<hr>
-<a href="micuenta.html" class="sub-menu-link">
+<a href="micuenta.php" class="sub-menu-link">
 <img src="assets/img/profile.png">
 <p>Mi cuenta</p>
 <span></span>
@@ -91,6 +89,9 @@ while ($row = $res->fetch_assoc()){
     function toggleMenu(){
         subMenu.classList.toggle("open-menu")
     }
+
 </script>
+
+
 </body>
 </html>
