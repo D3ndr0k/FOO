@@ -37,7 +37,7 @@ if(empty($_SESSION["id"])){
 <p>Mi cuenta</p>
 <span></span>
 </a>
-<a href="assets/img/ajustes.html" class="sub-menu-link">
+<a href="ajusteslocales.php" class="sub-menu-link">
     <img src="assets/img/setting.png">
     <p>Ajustes</p>
     <span></span>

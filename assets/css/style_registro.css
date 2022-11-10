@@ -20,6 +20,13 @@ body{
     transform: translate(-50%,-50%);
 }
 
+.centroo{
+    
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 form{
     padding: 15%  15%;
     text-align: center;
