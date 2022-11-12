@@ -18,6 +18,8 @@ include("config.php")
 <div class="centroo"> 
 <form action="" method="POST">
 
+  <!--NUEVO EMAIL-->
+
 <h1>⠀⠀⠀⠀Cambiar⠀email:⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀</h1>
 <br><br>
 EMAIL ACTUAL
@@ -26,10 +28,12 @@ EMAIL ACTUAL
 NUEVO EMAIL
     <input type="text" name="reemail" placeholder="">
     <br><br>
-   <center> <input class="boton" type="submit" value="GUARDAR" name="submitp" >
+   <center> <input class="boton" type="submit" value="GUARDAR" name="submit" >
     <br><br><hr>
 
-<h1>Camiara contraseña</h1>
+  <!--CAMBIAR CONTRA-->
+
+<h1>Cambiar contraseña</h1>
 <br><br>
 CONTRASEÑA ACTUAL
     <input type="password" name="pass" placeholder="">
@@ -38,40 +42,53 @@ NUEVA CONTRASEÑA
     <input type="password" name="repass" placeholder="">
     <br><br>
 
-    <input class="boton" type="submit" value="GUARDAR" name="submit" >
+    <input class="boton" type="submit" value="GUARDAR" name="submitp" >
 </form>
 </div>
 
 
 <?php
 
+  
+
+
+
 if(!empty($_POST["submit"])){
     $reemail = $_POST["reemail"];
     $email = $_POST["email"];
     $idu = $_SESSION["idu"];
 
+    $veremail = mysqli_query($conn,"SELECT * from locales where email='$reemail'");
+    $veremail2 = mysqli_query($conn,"SELECT * from usuarios where email='$reemail'");
 
-    $nuevoemail =  "UPDATE usuarios SET email='$reemail' WHERE id='$idu' and email='$email'";
-    
-    if (mysqli_query($conn, $nuevoemail)) {
-      echo "Datos guardados";
-    } else {
-      echo ":( Intenta otra vez";
+
+    if(mysqli_num_rows($veremail) > 0 || mysqli_num_rows($veremail2) > 0){
+    echo"ESTE CORREO YA EXISTE";
+    }else{
+      $nuevoemail =  mysqli_query($conn,"UPDATE usuarios SET email='$reemail' WHERE id='$idu' and email='$email'");
+      $corafect = mysqli_affected_rows($conn);
+  
+
+      if ($corafect > 0) {
+        echo "Datos guardados";
+      } else {
+        echo ":( Intenta otra vez";
+      }
     }
-
-
-}
+  }
 
 
 if(!empty($_POST["submitp"])){
-    $repasr = $_POST["repass"];
+    $repass = $_POST["repass"];
     $pass = $_POST["pass"];
     $idu = $_SESSION["idu"];
 
 
-    $nuevapass =  "UPDATE usuarios SET password='$reepass' WHERE id='$idu' and password='$pass'";
-    
-    if (mysqli_query($conn, $nuevapass)) {
+    $nuevapass = mysqli_query($conn,"UPDATE usuarios SET password='$reepass' WHERE id='$idu' and password='$pass'");
+    $conafect = mysqli_affected_rows($conn);
+
+
+    if ($conafect > 0) {
       echo "Datos guardados";
     } else {
       echo ":( Intenta otra vez";
