@@ -1,3 +1,6 @@
+<?php
+include("config.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +12,7 @@ Registro
 </head>
 <body>
     <header>
-        <a href="inicio.html" class="logo">
+        <a href="index.html" class="logo">
           <img src="./assets/img/logo.png">
         </a>
           <nav>
@@ -39,7 +42,7 @@ Registro
     <br>
     
     <?php 
-    include ("config.php");
+
     include ("controlusuarios.php");
     
     ?>

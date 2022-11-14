@@ -1,3 +1,6 @@
+<?php
+include("config.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +12,7 @@
 </head>
 <body>
     <header>
-        <a href="inicio.html" class="logo">
+        <a href="index.html" class="logo">
         <img src="./assets/img/logo.png" width:"120px">
         </a>
           <nav>
@@ -32,7 +35,6 @@
     <center><input class="boton" type="submit" value="Ingresar" name="submit">
     
 <?php
-include("config.php");
 include("ingresousuarios.php");
 ?>
 </form>
