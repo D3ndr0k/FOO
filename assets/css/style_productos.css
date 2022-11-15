@@ -10,6 +10,13 @@ body{
     color: #545454;
    
 }
+.centroo{
+    
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 
 .conten{
     width: auto;
@@ -61,33 +68,7 @@ h3{
 
 
 .desplega {
-  font-family:'Roboto', sans-serif;
-  background-color:#ffffff;
-  font-weight: 600;
-  color: white;
-  padding: 25px 70px;
-  border-radius: 40px;
-  font-size: 14px;
-  border: none;
-}
-.desplegable{
-  position: relative;
-  margin-inline: 15%;
-  display: inline-block;
-}
-
-.desplega-texto {
-  display: none;
-  position: absolute;
-  background-color: #ffffff;
-  min-width: 300px;
-  margin: 65% 0%
-  
-}
-.desplegable:hover .desplega-texto {display:block;}
-
-.boton {
-  font-family:'Roboto', sans-serif;
+ font-family:'Roboto', sans-serif;
   font-weight: 550;
   border:0px;
   background-color: #7EFF30;
@@ -98,5 +79,51 @@ h3{
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer; 
-  width: 200px;
+  width: 300px;
+  
+}
+.desplegable{
+  position: relative;
+  margin-inline: 15%;
+  display: inline-block;
+
+ 
+
+}
+
+.desplega-texto {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 350px;
+  margin: 0%;
+  transform: translate(-100%,-50%);
+  
+}
+.desplegable:hover .desplega-texto {display:block;}
+
+
+
+input {
+  width: 50%;
+  color: black;
+  font-size: 20px;
+  font-family:'Roboto', sans-serif;  
+  display: block;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 5px;
+  background-color:#f0f0f0;
+  margin: 5% 5px;
+}
+
+
+
+
+
+
+
+#actstock {
+  text-decoration:none;
+  color: #03f540;
 }

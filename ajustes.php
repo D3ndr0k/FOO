@@ -9,13 +9,13 @@ include("config.php")
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajustes</title>
-    <link rel="stylesheet" type="text/css" href="./assets/css/style_registro.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style_registro.css">
 </head>
 <body>
     <center>
-<h1>Ajustes</h1>
 <br><br><br><br>
-<div class="centroo"> 
+<div class="centroo">
+
 <form action="" method="POST">
 
   <!--NUEVO EMAIL-->
@@ -43,7 +43,12 @@ NUEVA CONTRASEÑA
     <br><br>
 
     <input class="boton" type="submit" value="GUARDAR" name="submitp" >
+
+
+
 </form>
+
+
 </div>
 
 

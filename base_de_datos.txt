@@ -9,7 +9,7 @@ create table usuarios(id int(7)primary key AUTO_INCREMENT,nombre varchar(30),ape
 
 create table locales(id int(7)primary key AUTO_INCREMENT,nombre varchar(30),direccion varchar(50),email varchar(255),password varchar(30),telefono int(9), rubro varchar (20));
 
-create table productos (id_producto int(7)primary key AUTO_INCREMENT,codigo int(15),nombre varchar(30),descripcion varchar(50),fechavencimiento date,precio int(6),marca varchar(15),imagen longblob,stock int(5), local int(7), foreign key(local) references locales(id));
+create table productos (id_producto int(7)primary key AUTO_INCREMENT,codigo int(15),nombre varchar(30),ingredientes varchar(50),fechavencimiento date,precio int(6),marca varchar(15),imagen longblob,stock int(5), local int(7), foreign key(local) references locales(id));
 
 create table reservas (fecha date, hora time, cantidad int (5), codigousuario int (7), foreign key (codigousuario) references usuarios (id), codigoproducto int (7), foreign key (codigoproducto) references productos (id_producto), primary key (fecha, hora, codigousuario, codigoproducto), codigolocal int (7), foreign key (codigolocal) references locales (id));
 

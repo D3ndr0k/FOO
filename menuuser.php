@@ -25,8 +25,22 @@ session_start();
         ?>
     </li>
 </ul>
+<?php $codigousuario = $_SESSION['idu']; ?>
 
-<img src="assets/img/Logo1.png" id="user-pic" alt="" onclick="toggleMenu()">
+<?php $query4 = "select imagen from usuarios where id = '$codigousuario' ";
+    $res4 = $conn ->query($query4);
+    while ($row4 = $res4->fetch_assoc()){ ?>
+
+<img src="data:image/;base64,  <?php echo base64_encode($row4['imagen']); ?>" id="user-pic" alt="" onclick="toggleMenu()">
+
+<?php if(empty($row4['imagen'])) { ?>
+
+<img src="assets/img/Logo1.png" id="usr-pic" alt="" onclick="toggleMenu()"></img>
+
+<?php } 
+
+} ?>
+
 <div class="sub-menu-wrapp" id="subMenu">
 <div class="sub-menu">
 <div class="uer-info">
@@ -67,6 +81,12 @@ session_start();
 $query = "select * from productos where stock>0";
 $res = $conn ->query($query);
 while ($row = $res->fetch_assoc()){
+
+$codigoprod = $row ['id_producto'];
+
+$local = $row ['local'];
+
+
     
 ?>
 
@@ -77,10 +97,25 @@ while ($row = $res->fetch_assoc()){
     <p>⠀⠀$<?php echo $row['precio']; ?> </p>
     <p>⠀⠀Vencimiento: <?php echo $row['fechavencimiento']; ?> </p>
 
+    <?php $query2 = "select local from productos where productos.id_producto = '$codigoprod' ";
+        $res2 = $conn ->query($query2);
+        while ($row2 = $res2->fetch_assoc()){
+
+            $codlocal = $row2["local"];
+            ?>
+            <?php $query3 = "select direccion from locales where id = '$codlocal' ";
+            $res3 = $conn ->query($query3);
+            while ($row3 = $res3->fetch_assoc()){ ?>
+
+                <?php $direccionlocal = $row3['direccion']; ?>
+    
+                <p>⠀⠀Dirección local: <?php echo $direccionlocal; ?> </p>
+
 </div>
 <?php
 }
-
+}
+}
 ?>
 </div>
   <br><br><br><br><br><br><br>.

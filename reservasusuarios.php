@@ -24,33 +24,47 @@ include("config.php");
       </li>
     </ul>
 
-<img src="assets/img/Logo1.png" id="user-pic" alt="" onclick="toggleMenu()">
+    <?php $codigousuario = $_SESSION['idu']; ?>
+
+<?php $query3 = "select imagen from usuarios where id = '$codigousuario' ";
+    $res3 = $conn ->query($query3);
+    while ($row3 = $res3->fetch_assoc()){ ?>
+
+<img src="data:image/;base64,  <?php echo base64_encode($row3['imagen']); ?>" id="user-pic" alt="" onclick="toggleMenu()">
+
+<?php if(empty($row3['imagen'])) { ?>
+
+<img src="assets/img/Logo1.png" id="usr-pic" alt="" onclick="toggleMenu()"></img>
+
+<?php } 
+
+} ?>
+
+
 <div class="sub-menu-wrapp" id="subMenu">
 <div class="sub-menu">
 <div class="uer-info">
 </div>
-<a href="micuenta.php" class="sub-menu-link">
-<img src="assets/img/profile.png">
-<p>Mi cuenta</p>
-<span></span>
-</a>
-<a href="assets/img/ajustes.html" class="sub-menu-link">
-    <img src="assets/img/setting.png">
-    <p>Ajustes</p>
-    <span></span>
-    </a>
-    <a href="ayuda.html" class="sub-menu-link">
-        <img src="assets/img/help.png">
-        <p>Ayuda</p>
-        <span></span>
+        <a href="micuenta.php" class="sub-menu-link">
+            <img src="assets/img/profile.png">
+                <p>Mi cuenta</p>
+                    <span></span>
+        </a>
+        <a href="ajustes.php" class="sub-menu-link">
+            <img src="assets/img/setting.png">
+                <p>Ajustes</p>
+                    <span></span>
+        </a>
+        <a href="ayuda.html" class="sub-menu-link">
+            <img src="assets/img/help.png">
+                <p>Ayuda</p>
+                    <span></span>
         </a>
         <a href="cerrar_sesion.php" class="sub-menu-link">
             <img src="assets/img/logout.png" >
-            <p>Cerrar sesión</p>
-            <span></span>
-            </a>
-
-           
+                <p>Cerrar sesión</p>
+                    <span></span>
+        </a>
 
 </div>
 </div>
@@ -60,17 +74,24 @@ include("config.php");
 </div>
 <br><br><br><br>
 <div class="conten">
-<?php
-
-$usuario = $_SESSION["idu"];
+<?php $usuario = $_SESSION["idu"];
 
 $query = "select * from reservas where codigousuario='$usuario'";
 $res = $conn ->query($query);
-while ($row = $res->fetch_assoc()){
-?>
+while ($row = $res->fetch_assoc()){ ?>
 
 <div class="cardd">
-    <img class="img" src="data:image/;base64,  <?php echo base64_encode($row['imagen']); ?>">
+
+<?php
+$codigoprod = $row['codigoproducto']; ?>
+
+<?php $query2 = "select imagen from productos where id_producto = '$codigoprod' ";
+    $res2 = $conn ->query($query2);
+    while ($row2 = $res2->fetch_assoc()){ ?>
+
+        <img class="img" src="data:image/;base64,  <?php echo base64_encode($row2['imagen']); ?>">
+
+        
     <h3>⠀⠀Fecha: <?php echo $row['fecha']; ?></h3>
     <p>⠀⠀Hora: <?php echo $row['hora']; ?> </p>
     <p>⠀⠀Cantidad: <?php echo $row['cantidad']; ?> </p>
@@ -80,6 +101,7 @@ while ($row = $res->fetch_assoc()){
 </div>
 
 <?php
+}
 }
 ?>
 </div>

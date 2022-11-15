@@ -8,6 +8,7 @@ if(!empty($_POST["submit"])){
     echo "<div class='alerta'> Completa todos los campos </div>";
   }else{
 
+    $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
     $nombre = $_POST["nombre"];
     $apellido = $_POST["apellido"];
     $email = $_POST["email"];
@@ -22,7 +23,7 @@ if(!empty($_POST["submit"])){
 
     }else{
 
-    $sql=$conn->query("insert into usuarios(nombre,apellido,email,password)values('$nombre','$apellido','$email','$password')");
+    $sql=$conn->query("insert into usuarios(nombre,apellido,email,password, imagen)values('$nombre','$apellido','$email','$password', '$imagen')");
    if ($sql==1) {
     header("location: iniciarsesion.php");
    }else{

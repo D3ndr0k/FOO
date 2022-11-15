@@ -21,8 +21,25 @@ include("config.php");
         ?></li>
 </ul>
 
+<?php   $codigolocal = $_SESSION['id'];
+        $query = "select imagen from locales where id = '$codigolocal' ";
+        $res = $conn ->query($query);
+        while ($row = $res->fetch_assoc()){  ?>
 
-<img src="assets/img/Logo1.png" id="user-pic" alt="" onclick="toggleMenu()">
+
+
+    <img src="data:image/;base64,  <?php echo base64_encode($row['imagen']);  ?>" id="user-pic" alt="" onclick="toggleMenu()"></img>
+
+    <?php if(empty($row['imagen'])) { ?>
+
+        <img src="assets/img/Logo1.png" id="usr-pic" alt="" onclick="toggleMenu()"></img>
+
+        <?php } 
+        
+    } ?>
+
+
+
 <div class="sub-menu-wrapp" id="subMenu">
 <div class="sub-menu">
 <div class="uer-info">
@@ -35,7 +52,7 @@ include("config.php");
 <p>Mi cuenta</p>
 <span></span>
 </a>
-<a href="assets/img/ajustes.html" class="sub-menu-link">
+<a href="ajustes.php" class="sub-menu-link">
     <img src="assets/img/setting.png">
     <p>Ajustes</p>
     <span></span>
@@ -72,13 +89,13 @@ while ($row = $res->fetch_assoc()){
 
 <div class="cardd">
     <img class="img" src="data:image/;base64,  <?php echo base64_encode($row['imagen']); ?>">
-    <h3>⠀⠀<?php echo $row['nombre']; ?></h3>
-    <p>⠀⠀<?php echo $row['descripcion']; ?> </p>
+    <a href="productolocal.php?pid=<?php echo $row['id_producto']; ?>"><h3>⠀⠀<?php echo $row['nombre']; ?></h3></a>
+
+    <p>⠀⠀<?php echo $row['ingredientes']; ?> </p>
     <p>⠀⠀$<?php echo $row['precio']; ?> </p>
     <p>⠀⠀Vencimiento: <?php echo $row['fechavencimiento']; ?> </p>
     <p>⠀⠀Marca: <?php echo $row['marca']; ?> </p>
     <p>⠀⠀Unidades disponibles: <?php echo $row['stock']; ?> </p>
-    <a href="actualizarstock.php">Actualizar stock</a>
 
 
 

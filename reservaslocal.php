@@ -25,7 +25,24 @@ include("config.php");
       </li>
     </ul>
 
-<img src="assets/img/Logo1.png" id="user-pic" alt="" onclick="toggleMenu()">
+    <?php   $codigolocal = $_SESSION['id'];
+        $query = "select imagen from locales where id = '$codigolocal' ";
+        $res = $conn ->query($query);
+        while ($row = $res->fetch_assoc()){  ?>
+
+
+
+    <img src="data:image/;base64,  <?php echo base64_encode($row['imagen']);  ?>" id="user-pic" alt="" onclick="toggleMenu()"></img>
+
+    <?php if(empty($row['imagen'])) { ?>
+
+        <img src="assets/img/Logo1.png" id="usr-pic" alt="" onclick="toggleMenu()"></img>
+
+        <?php } 
+        
+    } ?>
+
+
 <div class="sub-menu-wrapp" id="subMenu">
 <div class="sub-menu">
 <div class="uer-info">
@@ -35,7 +52,7 @@ include("config.php");
 <p>Mi cuenta</p>
 <span></span>
 </a>
-<a href="assets/img/ajustes.html" class="sub-menu-link">
+<a href="ajusteslocal.php" class="sub-menu-link">
     <img src="assets/img/setting.png">
     <p>Ajustes</p>
     <span></span>
@@ -72,30 +89,44 @@ while ($row = $res->fetch_assoc()){
 
 ?>
 
+
+
 <div class="cardd">
-    <img class="img" src="data:image/;base64,  <?php echo base64_encode($row['imagen']); ?>">
+
+<?php $codigoprod = $row['codigoproducto']; ?>
+
+<?php $query2 = "select imagen from productos where id_producto = '$codigoprod' ";
+    $res2 = $conn ->query($query2);
+    while ($row2 = $res2->fetch_assoc()){ ?>
+
+        <img class="img" src="data:image/;base64,  <?php echo base64_encode($row2['imagen']); ?>">
+
+
     <h3>⠀⠀Fecha: <?php echo $row['fecha']; ?></h3>
     <p>⠀⠀Hora: <?php echo $row['hora']; ?> </p>
     <p>⠀⠀Cantidad: <?php echo $row['cantidad']; ?> </p>
     <p>⠀⠀Código producto: <?php echo $row['codigoproducto']; ?> </p>
     <p>⠀⠀Código usuario: <?php echo $row['codigousuario']; ?> </p>
 
+
  
 
     <?php
-    $idl = $row['codigousuario'];  
-    $query2 = "select nombre from usuarios where id='$idl'";
-    $res2 = $conn ->query($query2);
-    while ($row = $res2->fetch_assoc()){
+    $idu = $row['codigousuario'];  
+    $query3 = "select nombre from usuarios where id='$idu'";
+    $res3 = $conn ->query($query3);
+    while ($row3 = $res3->fetch_assoc()){
 
     ?>
-    <p>⠀⠀Nombre usuario: <?php echo $row['nombre']; ?> </p>
+    <p>⠀⠀Nombre usuario: <?php echo $row3['nombre']; ?> </p>
+
 
 
 
 </div>
 
 <?php
+}
 }
 }
 ?>

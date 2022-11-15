@@ -28,18 +28,35 @@ session_start();
     </li>
 </ul>
 
-<img src="assets/img/Logo1.png" id="user-pic" alt="" onclick="toggleMenu()">
+<?php   $codigolocal = $_SESSION['id'];
+        $query = "select imagen from locales where id = '$codigolocal' ";
+        $res = $conn ->query($query);
+        while ($row = $res->fetch_assoc()){  ?>
+
+
+
+    <img src="data:image/;base64,  <?php echo base64_encode($row['imagen']);  ?>" id="user-pic" alt="" onclick="toggleMenu()"></img>
+
+    <?php if(empty($row['imagen'])) { ?>
+
+        <img src="assets/img/Logo1.png" id="usr-pic" alt="" onclick="toggleMenu()"></img>
+
+        <?php } 
+        
+    } ?>
+
+
 <div class="sub-menu-wrapp" id="subMenu">
 <div class="sub-menu">
 <div class="uer-info">
 
 </div>
-<a href="micuenta.html" class="sub-menu-link">
+<a href="micuentalocal.php" class="sub-menu-link">
 <img src="assets/img/profile.png">
 <p>Mi cuenta</p>
 <span></span>
 </a>
-<a href="assets/img/ajustes.html" class="sub-menu-link">
+<a href="ajustes.php" class="sub-menu-link">
     <img src="assets/img/setting.png">
     <p>Ajustes</p>
     <span></span>
@@ -67,13 +84,14 @@ session_start();
         <input type="file" name="imagen" accept="image/*">
         <input type="number" placeholder=" código del producto" name="codigo">
         <input type="text" placeholder=" nombre del producto" name="nombre">
-        <input type="text" placeholder=" descripción" name="descripcion">
+        <input type="text" placeholder=" ingredientes" name="ingredientes">
         <p>Fecha de vencimiento</p>
         <input type="date" name="fechavencimiento">
         <input type="number" step="0.01" min="0" placeholder=" precio" name="precio">
         <input type="text" placeholder=" marca" name="marca">
-        <input type="numbre" placeholder=" stock" name="stock">
+        <input type="number" placeholder=" stock" name="stock">
        <center> <input class="boton"type="submit" value="ingresar" name="submit" >
+
 
        <?php 
     include ("controlproductos.php");

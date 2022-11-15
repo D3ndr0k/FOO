@@ -22,7 +22,7 @@ session_start();
         <br><br>
     <?php
         echo "Apellido: ";
-        echo ($_SESSION["apellido"]); ?>
+        echo ucwords($_SESSION["apellido"]); ?>
         <br><br>
     <?php
         echo "Email: ";
@@ -31,8 +31,10 @@ session_start();
     <?php
         echo "Contraseña: ";
         echo ($_SESSION["passwordu"]); ?>
-</div>        
 
-</h1>
+
+    </form>  
+    
+</div>        
 </body>
 </html>

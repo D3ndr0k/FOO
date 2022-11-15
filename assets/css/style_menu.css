@@ -25,6 +25,15 @@ body {
     margin-left: 30px;
 }
 
+#usr-pic {
+    width: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-left : -30px;
+
+
+}
+
 #logo {
     width: 120px;
     margin-right: 50%;
@@ -346,3 +355,4 @@ h3 {
     right: 40%;
     color: #994AFF
 }
+  
