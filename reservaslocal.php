@@ -47,7 +47,7 @@ include("config.php");
 <div class="sub-menu">
 <div class="uer-info">
 </div>
-<a href="micuenta.php" class="sub-menu-link">
+<a href="micuentalocal.php" class="sub-menu-link">
 <img src="assets/img/profile.png">
 <p>Mi cuenta</p>
 <span></span>
@@ -57,7 +57,7 @@ include("config.php");
     <p>Ajustes</p>
     <span></span>
     </a>
-    <a href="ayuda.html" class="sub-menu-link">
+    <a href="ayuda.php" class="sub-menu-link">
         <img src="assets/img/help.png">
         <p>Ayuda</p>
         <span></span>
@@ -118,7 +118,7 @@ while ($row = $res->fetch_assoc()){
     while ($row3 = $res3->fetch_assoc()){
 
     ?>
-    <p>⠀⠀Nombre usuario: <?php echo $row3['nombre']; ?> </p>
+    <p>⠀⠀Nombre usuario: <?php echo ucwords ($row3['nombre']); ?> </p>
 
 
 

@@ -55,7 +55,7 @@ session_start();
     <p>Ajustes</p>
     <span></span>
     </a>
-    <a href="ayuda.html" class="sub-menu-link">
+    <a href="ayuda.php" class="sub-menu-link">
         <img src="assets/img/help.png">
         <p>Ayuda</p>
         <span></span>

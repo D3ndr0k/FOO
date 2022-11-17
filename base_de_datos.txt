@@ -5,9 +5,9 @@ create database foo;
 
 use foo;
 
-create table usuarios(id int(7)primary key AUTO_INCREMENT,nombre varchar(30),apellido varchar(30),email varchar(255),password varchar(30));
+create table usuarios(id int(7)primary key AUTO_INCREMENT,nombre varchar(30),apellido varchar(30),email varchar(255),password varchar(30), imagen longblob);
 
-create table locales(id int(7)primary key AUTO_INCREMENT,nombre varchar(30),direccion varchar(50),email varchar(255),password varchar(30),telefono int(9), rubro varchar (20));
+create table locales(id int(7)primary key AUTO_INCREMENT,nombre varchar(30),direccion varchar(50),email varchar(255),password varchar(30),telefono int(9), rubro varchar (20), imagen longblob);
 
 create table productos (id_producto int(7)primary key AUTO_INCREMENT,codigo int(15),nombre varchar(30),ingredientes varchar(50),fechavencimiento date,precio int(6),marca varchar(15),imagen longblob,stock int(5), local int(7), foreign key(local) references locales(id));
 

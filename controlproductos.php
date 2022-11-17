@@ -1,6 +1,5 @@
 <?php
 include "config.php";
-session_start();
 if(!empty($_POST["submit"])){
   if (empty($_POST["codigo"]) or empty($_POST["nombre"]) or empty($_POST["ingredientes"]) or empty($_POST["fechavencimiento"])or empty($_POST["precio"])or empty($_POST["marca"])){
     echo "<div class='alerta'> Completa todos los campos </div>";

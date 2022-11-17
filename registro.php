@@ -27,9 +27,11 @@ Registro
         
 <div class="centro"> 
 <!-- formulario para ingresar la información en el registro de un usuario -->
-<form action="" method="POST">
+<form action="" method="POST" enctype="multipart/form-data">
     <h1>⠀⠀REGÍSTRATE⠀⠀⠀⠀⠀⠀⠀⠀</h1>
     <hr color="#7EFF3"><br>
+    <input type="file" name="imagen" accept="image/*">
+    <br> <br>
     <input type="text"  maxlength="30" placeholder=" Nombre" name="nombre" required>
     <br> <br>
     <input type="text" maxlength="30" placeholder=" Apellido" name="apellido" required>

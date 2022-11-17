@@ -355,4 +355,25 @@ h3 {
     right: 40%;
     color: #994AFF
 }
+
+.formayuda {
+    
+    width: 50%;
+    height: 250px;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    margin: 20px;
+    position: absolute;
+    right: 320px;
+}
+
+textarea {
+    
+    border-radius: 20px;
+    margin: 20px;
+
+    
+}
+
+
   

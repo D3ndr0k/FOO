@@ -47,17 +47,17 @@ include("config.php");
 
 <!-- sub-menú desplegable con información sobre el local logueado y demás funcionalidades -->
 </div>
-<a href="micuenta.php" class="sub-menu-link">
+<a href="micuentalocal.php" class="sub-menu-link">
 <img src="assets/img/profile.png">
 <p>Mi cuenta</p>
 <span></span>
 </a>
-<a href="ajustes.php" class="sub-menu-link">
+<a href="ajusteslocal.php" class="sub-menu-link">
     <img src="assets/img/setting.png">
     <p>Ajustes</p>
     <span></span>
     </a>
-    <a href="ayuda.html" class="sub-menu-link">
+    <a href="ayuda.php" class="sub-menu-link">
         <img src="assets/img/help.png">
         <p>Ayuda</p>
         <span></span>

@@ -56,12 +56,12 @@ session_start();
 <p>Mi cuenta</p>
 <span></span>
 </a>
-<a href="ajustes.php" class="sub-menu-link">
+<a href="ajusteslocal.php" class="sub-menu-link">
     <img src="assets/img/setting.png">
     <p>Ajustes</p>
     <span></span>
     </a>
-    <a href="ayuda.html" class="sub-menu-link">
+    <a href="ayuda.php" class="sub-menu-link">
         <img src="assets/img/help.png">
         <p>Ayuda</p>
         <span></span>
@@ -77,9 +77,9 @@ session_start();
 </div>
 <br><br><br><br><br><br><br>
     <div class="med"> 
-        
-    <form action="" method="POST" enctype="multipart/form-data">
 
+    <form action="" method="POST" enctype="multipart/form-data">
+        
     <h3> <p>Imagen del producto</p><h3> 
         <input type="file" name="imagen" accept="image/*">
         <input type="number" placeholder=" código del producto" name="codigo">
