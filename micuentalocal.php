@@ -16,6 +16,23 @@ session_start();
 <h1>
 
 <div class="infouser">
+
+<?php   $codigolocal = $_SESSION['id'];
+        $query = "select imagen from locales where id = '$codigolocal' ";
+        $res = $conn ->query($query);
+        while ($row = $res->fetch_assoc()){  ?>
+
+
+
+    <img src="data:image/;base64,  <?php echo base64_encode($row['imagen']);  ?>" id="user-img" alt=""></img>
+
+    <?php if(empty($row['imagen'])) { ?>
+
+        <img src="assets/img/Logo1.png" id="usr-img" alt=""></img>
+
+        <?php } 
+        
+    } ?> <br><br>
     <?php
         echo "Nombre: ";
         echo ucwords($_SESSION["nombre"]); ?>

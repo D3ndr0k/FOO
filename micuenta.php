@@ -13,9 +13,27 @@ session_start();
     <link rel="stylesheet" type="text/css" href="./assets/css/style_menu.css">
 </head>
 <body>
+
+
 <h1>
 
 <div class="infouser">
+
+<?php $codigousuario = $_SESSION['idu']; ?>
+
+<?php $query = "select imagen from usuarios where id = '$codigousuario' ";
+    $res = $conn ->query($query);
+    while ($row = $res->fetch_assoc()){ ?>
+
+<img src="data:image/;base64,  <?php echo base64_encode($row['imagen']); ?>" alt="" id="user-img">
+
+<?php if(empty($row['imagen'])) { ?>
+
+<img src="assets/img/Logo1.png"  alt="" id="usr-img"></img>
+
+<?php } 
+
+} ?>  <br><br>
     <?php
         echo "Nombre: ";
         echo ucwords($_SESSION["nombreu"]); ?>
@@ -32,8 +50,8 @@ session_start();
         echo "Contraseña: ";
         echo ($_SESSION["passwordu"]); ?>
 
+</h1>
 
-    </form>  
     
 </div>        
 </body>

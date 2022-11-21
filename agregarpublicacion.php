@@ -3,7 +3,6 @@ include("config.php");
 session_start();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +12,7 @@ session_start();
     <title>Agregar publicación</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style_menu.css">
 </head>
+
 <body bgcolor="#ffe8ef">
 
 <div class="hero">
@@ -41,8 +41,8 @@ session_start();
 
         <img src="assets/img/Logo1.png" id="usr-pic" alt="" onclick="toggleMenu()"></img>
 
-        <?php } 
-        
+    <?php 
+        } 
     } ?>
 
 
@@ -56,7 +56,7 @@ session_start();
 <p>Mi cuenta</p>
 <span></span>
 </a>
-<a href="ajusteslocal.php" class="sub-menu-link">
+<a href="ajusteslocales.php" class="sub-menu-link">
     <img src="assets/img/setting.png">
     <p>Ajustes</p>
     <span></span>
@@ -90,24 +90,21 @@ session_start();
         <input type="number" step="0.01" min="0" placeholder=" precio" name="precio">
         <input type="text" placeholder=" marca" name="marca">
         <input type="number" placeholder=" stock" name="stock">
-       <center> <input class="boton"type="submit" value="ingresar" name="submit" >
+       <center> <input class="boton"type="submit" value="ingresar" name="submit">
 
-
-       <?php 
-    include ("controlproductos.php");
+    <?php 
+        include ("controlproductos.php");
     ?>
 
     </form>
     </div>
 
-
-
     <script>
-    let subMenu=document.getElementById("subMenu")
-    function toggleMenu(){
-        subMenu.classList.toggle("open-menu")
-    }
-</script>
+        let subMenu=document.getElementById("subMenu")
+        function toggleMenu() {
+            subMenu.classList.toggle("open-menu")
+        }
+    </script>
 
 </body>
 </html>

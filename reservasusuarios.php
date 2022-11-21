@@ -14,7 +14,7 @@ include("config.php");
 
 
 <nav class="menu">
-  <a href="menu.php"> <img src="assets/img/logo.png" id="logo" alt=""></a>
+  <a href="menuuser.php"> <img src="assets/img/logo.png" id="logo" alt=""></a>
 
    <ul>
      <li>

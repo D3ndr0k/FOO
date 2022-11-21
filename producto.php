@@ -27,10 +27,11 @@ $row = mysqli_fetch_array($res);
     <p>⠀⠀$<?php echo $row['precio']; ?> </p>
     <p>⠀⠀Vencimiento: <?php echo $row['fechavencimiento']; ?> </p>
     <p>⠀⠀Stock: <?php echo $row['stock']; ?></p>
-  
+
+    <br>
 
     <form action="" method="POST">
-   <center><input type="number" name="cantidad" placeholder="Cantidad" min="1" max="<?php echo $row['stock']; ?>"> <br><br>
+   <center><input type="number" name="cantidad" placeholder="⠀⠀Cantidad" min="1" max="<?php echo $row['stock']; ?>"> <br>
      <input class="boton" type="submit" value="RESERVAR" name="submit" >
     </form>
 

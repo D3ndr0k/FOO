@@ -52,7 +52,7 @@ include("config.php");
 <p>Mi cuenta</p>
 <span></span>
 </a>
-<a href="ajusteslocal.php" class="sub-menu-link">
+<a href="ajusteslocales.php" class="sub-menu-link">
     <img src="assets/img/setting.png">
     <p>Ajustes</p>
     <span></span>

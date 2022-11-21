@@ -22,7 +22,7 @@ if(empty($_SESSION["id"])){
 
     <nav class="menu">
 
-    <a href="inicio.html"><img src="assets/img/logo.png" id="logo" alt=""></a>
+    <a href="menu.php"><img src="assets/img/logo.png" id="logo" alt=""></a>
    
     <ul>
      <li> <?php echo ucwords($_SESSION["nombre"]);?> </li>
@@ -58,7 +58,7 @@ if(empty($_SESSION["id"])){
             <p>Mi cuenta</p>
                 <span></span>
     </a>
-    <a href="ajusteslocal.php" class="sub-menu-link">
+    <a href="ajusteslocales.php" class="sub-menu-link">
         <img src="assets/img/setting.png">
             <p>Ajustes</p>
                 <span></span>

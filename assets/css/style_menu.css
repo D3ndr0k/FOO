@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
 body {
     margin: 0;
     padding: 0;
@@ -30,8 +31,6 @@ body {
     border-radius: 30px;
     cursor: pointer;
     margin-left : -30px;
-
-
 }
 
 #logo {
@@ -50,26 +49,20 @@ body {
     position: relative;
 }
 
-nav,
-ul {
+nav, ul {
     width: 100%;
     text-align: right;
 }
 
-nav,
-ul,
-li,
-a {
+nav, ul, li, a {
     color: #fff;
     text-decoration: none;
 }
 
-nav,
-li,
-ul {
+nav, li, ul {
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 0px 20px;
 }
 
 .sub-menu-wrapp {
@@ -97,8 +90,7 @@ ul {
     align-items: center;
 }
 
-.uer-info,
-h3 {
+.uer-info, h3 {
     font-weight: 500;
     color: #1a1a1a;
 }
@@ -119,8 +111,7 @@ h3 {
     margin: 12px 0;
 }
 
-.sub-menu-link,
-p {
+.sub-menu-link, p {
     width: 100%;
 }
 
@@ -132,8 +123,7 @@ p {
     margin-right: 15px;
 }
 
-.sub-menu-link,
-span {
+.sub-menu-link, span {
     font-size: 22px;
     transition: transform 0.5s;
 }
@@ -212,7 +202,7 @@ form {
     padding: 15% 15%;
     min-width: 500px;
     text-align: center;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
 }
 
@@ -226,34 +216,12 @@ form {
     overflow: hidden;
 }
 
-.conten .card {
-    width: auto;
-    height: 250px;
-    border-radius: 20px;
-    background-color: rgb(255, 255, 255);
-    margin: 20px;
-}
-
 .prod {
     width: 500px;
     height: 800px;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     margin: 20px;
-}
-
-.img {
-    border-radius: 20px;
-    width: 300px;
-    height: 100px;
-    object-fit: cover;
-}
-
-.imgg {
-    border-radius: 20px;
-    width: 500px;
-    height: 250px;
-    object-fit: cover;
 }
 
 h3 {
@@ -296,19 +264,9 @@ h3 {
     display: block;
 }
 
-.conten {
-    width: auto;
-    max-width: auto;
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: hidden;
-}
-
 .conten .card {
     width: auto;
-    height: 250px;
+    height: 270px;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     margin: 20px;
@@ -317,14 +275,6 @@ h3 {
 .conten .cardd {
     width: auto;
     height: 350px;
-    border-radius: 20px;
-    background-color: rgb(255, 255, 255);
-    margin: 20px;
-}
-
-.prod {
-    width: 500px;
-    height: 800px;
     border-radius: 20px;
     background-color: rgb(255, 255, 255);
     margin: 20px;
@@ -344,20 +294,13 @@ h3 {
     object-fit: cover;
 }
 
-h3 {
-    color: #994aff;
-}
-
 .infouser {
     background-color: #f0f0f0;
-    position: absolute;
-    top: 20%;
-    right: 40%;
+    text-align: center;
     color: #994AFF
 }
 
 .formayuda {
-    
     width: 50%;
     height: 250px;
     border-radius: 20px;
@@ -368,12 +311,16 @@ h3 {
 }
 
 textarea {
-    
     border-radius: 20px;
     margin: 20px;
-
-    
 }
 
+#user-img {
+    width: 80px;
+    border-radius: 30px;
+}
 
-  
+#usr-img {
+    width: 80px;
+    border-radius: 30px;
+}

@@ -6,12 +6,13 @@ body{
   font-family:'Roboto', sans-serif;
   color: #3f1b6d;
 }
+
 a{
   text-decoration: none;
   color: white;
 }
 
-header{
+header {
   display: flex;
   justify-content:space-between;
   min-height: 70px;
@@ -23,23 +24,26 @@ header{
   z-index: 10;
 }
 
-.logo{
+.logo {
   display: flex;
   align-items: center;
   padding: 10px;
 }
 
-.logo img{
+.logo img {
   height: 50px; 
   margin-right: 10px;
 }
-nav a{
+
+nav a {
   font-weight: 500;
   padding-right: 10px;
 }
-nav a:hover{
+
+nav a:hover {
   color:#3f1b6d;
 }
+
 button {
   font-family:'Roboto', sans-serif;
   font-weight: 500;
@@ -53,51 +57,55 @@ button {
   transition-duration: 0.4s;
   cursor: pointer; 
 }
-button:hover{
+
+button:hover {
   background-color:#3f1b6d;
   color: white;
 }
+
 .comp {
   width: 100%;
   display: flex;
-  }
+}
 
-.container{
+.container {
   margin: 0 auto;
   width: 75%;
   max-width: 800px;
   text-align: center;
-
 }
 
-h1{
+h1 {
   font-size: 50px;
 }
 
-
-footer{
+footer {
   background-color:#3e1b6d2c;
   padding: 4rem 0;
   text-align: center;
 }
-.fotos{
+
+.fotos {
   border-radius: 20px;
   width:300px;
   height:450px;
   margin: 8%;
 }
-.fotoscomo{
+
+.fotoscomo {
   border-radius: 20px;
   width:400px;
   height:400px;
   margin: 4%;
 }
-.fotossob{
+
+.fotossob {
   border-radius: 20px;
   width:350px;
   height:350px;
   margin: 10%;
 }
+
 .desplega {
   font-family:'Roboto', sans-serif;
   background-color:#3f1b6d;
@@ -108,7 +116,8 @@ footer{
   font-size: 14px;
   border: none;
 }
-.desplegable{
+
+.desplegable {
   position: relative;
   margin-inline: 15%;
   display: inline-block;
@@ -122,12 +131,13 @@ footer{
   margin: 15% -15%
   
 }
-.desplegable:hover .desplega-texto {display:block;}
+.desplegable:hover .desplega-texto { 
+  display:block;
+}
 
-.containersob{
+.containersob {
   margin: 0 auto;
   width: 75%;
   max-width: 1000px;
   text-align: center;
-
 }

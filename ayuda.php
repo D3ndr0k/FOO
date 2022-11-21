@@ -10,7 +10,7 @@
 <body>
     <div class="formayuda">
 
-    <form action="send" method="POST">
+    <form action="mailto:proyectofoo2022@gmail.com" method="POST">
         <h2>¿Tienes alguna duda?</h2>
         <br>
         <input type="text" name="nombre" placeholder="⠀⠀Nombre">
@@ -19,7 +19,7 @@
         <br><br>
         <h4> Escribe aquí tu consulta </h4>
         <br>
-        <textarea rows="20" cols="60" name="consulta" placeholder="Consulta">
+        <textarea rows="20" cols="60" name="consulta" placeholder="⠀⠀Consulta">
         </textarea>
         <br><br>
         <input type="submit" name="enviar" value="Enviar">

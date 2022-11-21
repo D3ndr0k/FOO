@@ -9,7 +9,7 @@ include("config.php")
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajustes</title>
-    <link rel="stylesheet" type="text/css" href="./assets/style_productos.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style_productos.css">
 </head>
 <body>
     <center>
@@ -129,101 +129,119 @@ NUEVO TELÉFONO
   //CAMBIO EMAIL
  
 if(!empty($_POST["submit"])){
-    $reemail = $_POST["reemail"];
-    $email = $_POST["email"];
-    $idl = $_SESSION["id"];
+  if(!empty($_POST["reemail"])){
 
-    $veremail = mysqli_query($conn,"SELECT * from locales where email='$reemail'");
-    $veremail2 = mysqli_query($conn,"SELECT * from usuarios where email='$reemail'");
+      $reemail = $_POST["reemail"];
+      $email = $_POST["email"];
+      $idl = $_SESSION["id"];
+
+      $veremail = mysqli_query($conn,"SELECT * from locales where email='$reemail'");
+      $veremail2 = mysqli_query($conn,"SELECT * from usuarios where email='$reemail'");
 
 
-    if(mysqli_num_rows($veremail) > 0 || mysqli_num_rows($veremail2) > 0){
-    echo"ESTE CORREO YA EXISTE";
-    }else{
+      if(mysqli_num_rows($veremail) > 0 || mysqli_num_rows($veremail2) > 0){
+      echo"Este correo '$reemail' ya existe.";
+      }else{
 
-    $nuevo =  mysqli_query($conn,"UPDATE locales SET email='$reemail' WHERE id='$idl' and email='$email'");
-    $afect = mysqli_affected_rows($conn);
+      $nuevo =  mysqli_query($conn,"UPDATE locales SET email='$reemail' WHERE id='$idl' and email='$email'");
+      $afect = mysqli_affected_rows($conn);
 
-    if ($afect > 0) {
-      echo "Datos guardados";
-    } else {
-      echo ":( Intenta otra vez";
+      if ($afect > 0) {
+        echo "Datos guardados";
+      } else {
+        echo ":( Intenta otra vez";
+      }
     }
+  }else{
+    echo "Completa el campo 'Nuevo Email'.";
   }
 }
 
   //CAMBIO CONTRA
 
 if(!empty($_POST["submitp"])){
+  if(!empty($_POST["recontra"])){
     $repass = $_POST["recontra"];
     $pass = $_POST["contra"];
     $idl = $_SESSION["id"];
-
+   
+    $nuevopass = mysqli_query($conn,"UPDATE locales SET password ='$repass' WHERE id='$idl' and password='$pass'");
+    $conafect = mysqli_affected_rows($conn);
     
-$nuevopass = mysqli_query($conn,"UPDATE locales SET password ='$repass' WHERE id='$idl' and password='$pass'");
-$conafect = mysqli_affected_rows($conn);
-
     if ($conafect > 0) {
       echo "Datos guardados";
     } else {
-      echo ":( Intenta otra vez $pass";
+      echo ":( Intenta otra vez ";
       
     }
+  }else{
+    echo "Complete el campo 'Nueva Contraseña'.";
+  }
 }
 
 
   //CAMBIO NOMBRE
 
   if(!empty($_POST["submitl"])){
-    $rename = $_POST["rename"];
-    $pass = $_POST["con"];
-    $idl = $_SESSION["id"];
-  
-  
-    $nuevonom =  mysqli_query($conn,"UPDATE locales SET nombre='$rename' WHERE id='$idl' and password='$pass'");
-    $nomafect = mysqli_affected_rows($conn);
+    if(!empty($_POST["rename"])){
+      $rename = $_POST["rename"];
+      $pass = $_POST["con"];
+      $idl = $_SESSION["id"];
+    
+    
+      $nuevonom =  mysqli_query($conn,"UPDATE locales SET nombre='$rename' WHERE id='$idl' and password='$pass'");
+      $nomafect = mysqli_affected_rows($conn);
 
-    if ($nomafect > 0) {
-      echo "Datos guardados";
-    } else {
-      echo ":( Intenta otra vez";
+      if ($nomafect > 0) {
+        echo "Datos guardados";
+      } else {
+        echo ":( Intenta otra vez";
+      }
+    }else{
+      echo "Complete el campo 'Nuevo Nombre'.";
     }
 }
 
   //CAMBIO DIRECCION
 
 if(!empty($_POST["submitd"])){
-  $dir = $_POST["dir"];
-  $pass = $_POST["cont"];
-  $idl = $_SESSION["id"];
+  if(!empty($_POST["dir"])){
+    $dir = $_POST["dir"];
+    $pass = $_POST["cont"];
+    $idl = $_SESSION["id"];
 
+    $nuevadir = mysqli_query($conn,"UPDATE locales SET direccion='$dir' WHERE id='$idl' and password='$pass'");
+    $dirafect = mysqli_affected_rows($conn);
 
-
-$nuevadir = mysqli_query($conn,"UPDATE locales SET direccion='$dir' WHERE id='$idl' and password='$pass'");
-$dirafect = mysqli_affected_rows($conn);
-
-  if ($dirafect > 0) {
-    echo "Datos guardados";
-  } else {
-    echo ":( Intenta otra vez";
+    if ($dirafect > 0) {
+      echo "Datos guardados";
+    } else {
+      echo ":( Intenta otra vez";
+    }
+  }else{
+    echo "Completa el campo Nueva Dirección";
   }
+  
 }
 
   //CAMBIO TELEFONO
 
 if(!empty($_POST["submitt"])){
-  $tel = $_POST["tel"];
-  $pass = $_POST["passw"];
-  $idl = $_SESSION["id"];
+  if(!empty($_POST["tel"])){
+    $tel = $_POST["tel"];
+    $pass = $_POST["passw"];
+    $idl = $_SESSION["id"];
 
+    $nuevotel =  mysqli_query($conn,"UPDATE locales SET telefono='$tel' WHERE id='$idl' and password='$pass'");
+    $telafect = mysqli_affected_rows($conn);
 
-  $nuevotel =  mysqli_query($conn,"UPDATE locales SET telefono='$tel' WHERE id='$idl' and password='$pass'");
-  $telafect = mysqli_affected_rows($conn);
-
-    if ($telafect > 0) {
-    echo "Datos guardados";
-  } else {
-    echo ":( Intenta otra vez";
+      if ($telafect > 0) {
+      echo "Datos guardados";
+    } else {
+      echo ":( Intenta otra vez";
+    }
+  }else{
+    echo "Complete el campo 'Nuevo Teléfono'.";
   }
 }
 

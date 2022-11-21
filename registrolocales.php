@@ -26,7 +26,7 @@ Registro
         </header> 
 <br><br><br><br><br>
         <div class="desplegable">
-    <img width="50px" src="https://cdn-icons-png.flaticon.com/512/189/189665.png">
+    <img width="50px" src="./assets/img/preguntaicono.png">
     <div class="desplega-texto">
       .....................................................................
       Paso 1: Registra tu negocio.

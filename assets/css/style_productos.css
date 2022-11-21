@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-body{
+body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -8,17 +8,16 @@ body{
     font-family:'Roboto', sans-serif;
     background-color: #f1f1f1;
     color: #545454;
-   
 }
-.centroo{
-    
+
+.centroo {
   position: absolute;
   top: 70%;
   left: 50%;
   transform: translate(-50%,-50%);
 }
 
-.conten{
+.conten {
     width: auto;
     max-width: auto;
     height: auto;
@@ -27,7 +26,8 @@ body{
     justify-content: center;
     overflow: hidden;
 }
-.conten .card{
+
+.conten .card {
     width: auto;
     height: 250px;
     border-radius: 20px;
@@ -35,8 +35,7 @@ body{
     margin: 20px;
 }
 
-
-.prod{
+.prod {
   width: 500px;
   height: 800px;
   border-radius: 20px;
@@ -44,31 +43,26 @@ body{
   margin: 20px;
 }
 
-.img{
+.img {
     border-radius: 20px;
     width:300px;
     height: 100px;
     object-fit: cover;
-    
-   
-  }
-  .imgg{
+}
+
+.imgg {
     border-radius: 20px;
     width:500px;
     height: 250px;
     object-fit: cover;
-    
-   
-  }
+}
 
-h3{
+h3 {
     color:#994aff;
 }
 
-
-
 .desplega {
- font-family:'Roboto', sans-serif;
+  font-family:'Roboto', sans-serif;
   font-weight: 550;
   border:0px;
   background-color: #7EFF30;
@@ -80,15 +74,12 @@ h3{
   transition-duration: 0.4s;
   cursor: pointer; 
   width: 300px;
-  
 }
-.desplegable{
+
+.desplegable {
   position: relative;
   margin-inline: 15%;
   display: inline-block;
-
- 
-
 }
 
 .desplega-texto {
@@ -98,11 +89,11 @@ h3{
   min-width: 350px;
   margin: 0%;
   transform: translate(-100%,-50%);
-  
 }
-.desplegable:hover .desplega-texto {display:block;}
 
-
+.desplegable:hover .desplega-texto {
+  display:block;
+}
 
 input {
   width: 50%;
@@ -116,12 +107,6 @@ input {
   background-color:#f0f0f0;
   margin: 5% 5px;
 }
-
-
-
-
-
-
 
 #actstock {
   text-decoration:none;

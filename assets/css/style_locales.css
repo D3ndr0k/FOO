@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
-body{
+body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -8,125 +8,124 @@ body{
     font-family:'Roboto', sans-serif;
     background-color: #f0f0f0;
     color: #545454;
-   
 }
 
-.hero{
-top: 0%;
-width: 100%;
-min-height: 100vh;
-background: #eceaff;
-color: #525252;
-
+.hero {
+    top: 0%;
+    width: 100%;
+    min-height: 100vh;
+    background: #eceaff;
+    color: #525252;
 }
 
-nav{
+nav {
     padding: 0% 0%;
 }
-#user-pic{
-width: 40px;
-border-radius: 30px;
 
-cursor: pointer;
-margin-left: 30px;
+#user-pic {
+    width: 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-left: 30px;
 }
 
-#logo{
-width: 120px;
-margin-right:50%;
- 
+#logo {
+    width: 120px;
+    margin-right:50%;
 }
-.menu{
-background: #994aff;
-width: 100%;
-padding: 10px 10%;
-display: flex;
-align-items: center;
-justify-content:  space-between;
 
-
+.menu {
+    background: #994aff;
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content:  space-between;
 }
-nav,ul{
 
+nav, ul {
     width: 100%;
     text-align: right;
 }
-nav,ul,li,a{
-   
+nav, ul, li, a{
     color: #fff;
     text-decoration: none;
-
-
 }
-nav,li,ul{
+
+nav, li, ul {
     display: inline-block;
     list-style: none;
     margin: 10px 20px;
-
-
 }
 
-.sub-menu-wrapp{
-position: absolute;
-top: 100%;
-right: 10%;
-width: 320px;
-max-height: 0px;
-overflow: hidden;
-transition: max-height 0.5s;
-
+.sub-menu-wrapp {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
 }
-.sub-menu-wrapp.open-menu{
+
+.sub-menu-wrapp.open-menu {
     max-height: 400px;
 }
-.sub-menu{
-background: #fff;
-padding: 20px;
-margin: 10px;
 
+.sub-menu {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
 }
-.uer-info{
+
+.uer-info {
     display: flex;
     align-items: center;
 }
-.uer-info, h3{
 
+.uer-info, h3 {
     font-weight: 500;
     color: #1a1a1a;
 }
-.sub-menu hr{
 
+.sub-menu hr{
     border: 0;
     height: 1px;
     width: 100%;
     background: #ccc;
     margin: 15px 0 10px;
 }
-.sub-menu-link{
-display: flex;
-align-items: center;
-text-decoration: none;
-color:#525252 ;
-margin: 12px 0;
+
+.sub-menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:#525252 ;
+    margin: 12px 0;
 }
-.sub-menu-link, p{
+
+.sub-menu-link, p {
     width: 100%;
 }
+
 .sub-menu-link img{
-width: 40px;
-background: #e5e5e5;
-border-radius: 50%;
-padding: 8px;
-margin-right: 15px;
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px;
+    margin-right: 15px;
 }
-.sub-menu-link, span{
+
+.sub-menu-link, span {
     font-size: 22px;
     transition: transform 0.5s;
 }
-.sub-menu-link:hover span{
+
+.sub-menu-link:hover span {
     transform: translateX(5px);
 }
-.sub-menu-link:hover p{
+
+.sub-menu-link:hover p {
     font-weight: 600;
 }
 
@@ -142,7 +141,8 @@ button {
     margin: 4px 2px;
     cursor: pointer; 
   }
-  .med{
+
+.med {
     
     position: absolute;
     top: 50%;
@@ -150,33 +150,26 @@ button {
     transform: translate(-50%,-50%);
 }
 
-
-  .centro{
-    
+.centro {  
     position: absolute;
     top: 58%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 
-.centro2{
-    
+.centro2 {
     position: absolute;
     top: 40%;
     left: 60%;
     transform: translate(-50%,-50%);
 }
 
-.centro3{
-    
+.centro3 {
     position: absolute;
     top: 40%;
     left: 40%;
     transform: translate(-50%,-50%);
 }
-
-
-
 
 input {
     width: 100%;
@@ -190,6 +183,7 @@ input {
     background-color:#f0f0f0;
     margin: 5% 0px;
 }
+
 .boton {
     font-family:'Roboto', sans-serif;
     font-weight: 550;
@@ -203,8 +197,9 @@ input {
     transition-duration: 0.4s;
     cursor: pointer; 
     width: 200px;
-  }
-  form{
+}
+
+  form {
     padding: 15%  15%;
     min-width: 500px;
     text-align: center;
